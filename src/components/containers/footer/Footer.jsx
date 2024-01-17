@@ -1,10 +1,12 @@
 import React from 'react';
 import './footer.css';
 
+import { Contact } from '../../ui';
+
 const Footer = () => {
     return (
         <div className="cs_footer">
-            Footer
+            <Contact />
         </div>
     )
 }

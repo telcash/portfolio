@@ -18,6 +18,12 @@
         "title": "Proyectos"
     },
     "footer": {
-        "title": "Contacto"
+        "title": "Contacto",
+        "contact": {
+            "name": "Nombre",
+            "email": "Correo electrónico",
+            "message": "Mensaje",
+            "submit": "Enviar"
+        }
     }
 }
