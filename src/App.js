@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 
-import { Menu, Hero, Skills, Portfolio, Footer } from './components/containers';
+import { Navbar, Hero, Skills, Portfolio, Footer } from './components/containers';
 
 const App = () => {
   return (
     <div className="App">
-      <nav><Menu/></nav>
+      <nav><Navbar/></nav>
       <section><Hero/></section>
       <section><Skills/></section>
       <section><Portfolio/></section>
