@@ -12,9 +12,19 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
-const pages = ['Skills', 'Projects', 'Contact'];
+import { useTranslation } from "react-i18next";
+
+
 
 const Navbar = () => {
+
+    const [t, i18n] = useTranslation("global");
+
+    const pages = [
+        t("navbar.pages.skills"),
+        t("navbar.pages.projects"),
+        t("navbar.pages.contact")
+    ];
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
 
@@ -44,9 +54,10 @@ const Navbar = () => {
                             letterSpacing: '.3rem',
                             color: 'inherit',
                             textDecoration: 'none',
+                            textTransform: 'uppercase'
                             }}
                         >
-                            CARLOS SALAZAR
+                            {t("name")}
                         </Typography>
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -99,16 +110,21 @@ const Navbar = () => {
                             letterSpacing: '.3rem',
                             color: 'inherit',
                             textDecoration: 'none',
+                            textTransform: 'uppercase'
                             }}
                         >
-                            CARLOS SALAZAR
+                            {t("name")}
                         </Typography>
+                        <Button onClick={() => i18n.changeLanguage('es')} variant="contained" color="secondary" disableElevation sx={{ margin: 2, display: { xs: 'flex', md: 'none' } }}>ES</Button>
+                        <Button onClick={() => i18n.changeLanguage('en')} variant="contained" color="secondary" disableElevation sx={{ margin: 2, display: { xs: 'flex', md: 'none' } }}>EN</Button>
                         <Box sx={{ flexGrow: 1, justifyContent: 'flex-end', display: { xs: 'none', md: 'flex' } }}>
+                            <Button onClick={() => i18n.changeLanguage('es')} variant="contained" color="secondary" disableElevation sx={{ margin: 2 }}>ES</Button>
+                            <Button onClick={() => i18n.changeLanguage('en')} variant="contained" color="secondary" disableElevation sx={{ margin: 2 }}>EN</Button>
                             {pages.map((page) => (
                             <Button
                                 key={page}
                                 onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
+                                sx={{ my: 2, color: 'white', display: 'block', width: 120 }}
                             >
                                 {page}
                             </Button>

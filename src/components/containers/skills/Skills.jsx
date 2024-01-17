@@ -2,13 +2,17 @@ import React from "react";
 import './skills.css';
 
 import { SkillBar } from '../../ui'
-
 import { angularLogo, reactLogo, cssLogo, nodeLogo, expressjsLogo, nestjsLogo } from '../../../assets/logos';
 
+import { useTranslation } from "react-i18next";
+
 const Skills = () => {
+
+    const [t] = useTranslation("global");
+
     return (
         <div className="cs_skills">
-            <h2>SKILLS</h2>
+            <h2>{t("skills.title")}</h2>
             <div className="cs_skills_containers">
                 <div className="cs_skills-container">
                     <h3>Frontend</h3>
