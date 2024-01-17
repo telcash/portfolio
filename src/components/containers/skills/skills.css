@@ -1,0 +1,11 @@
+.cs_skills_containers {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.cs_skills-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}

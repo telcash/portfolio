@@ -1,0 +1,27 @@
+.cs_skillBar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cs_skillBar-logo{
+    width: 30px;
+    height: 30px;
+    margin-right: 1rem;
+}
+
+.cs_skillBar-heading {
+    width: 100px;
+    height: 30px;
+    background-color: lightblue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cs_skillBar-logo img {
+    width: 100%;
+    height: auto;
+}
