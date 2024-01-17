@@ -16,5 +16,8 @@
     },
     "portfolio": {
         "title": "Proyectos"
+    },
+    "footer": {
+        "title": "Contacto"
     }
 }
