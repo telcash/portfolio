@@ -1,0 +1,20 @@
+{
+    "name": "Carlos Salazar",
+    "navbar": {
+        "pages": {
+            "skills": "Skills",
+            "projects": "Projects",
+            "contact": "Contact"
+        }
+    },
+    "hero": {
+        "job": "Full-Stack Developer",
+        "description": ""
+    },
+    "skills": {
+        "title": "Skills"
+    },
+    "portfolio": {
+        "title": "Projects"
+    }
+}
