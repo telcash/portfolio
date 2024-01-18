@@ -38,7 +38,7 @@ const Navbar = () => {
 
     return (
         <div className="cs_navbar">
-            <AppBar position="static">
+            <AppBar position="fixed" color="white">
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
                         <Typography
@@ -115,16 +115,17 @@ const Navbar = () => {
                         >
                             {t("name")}
                         </Typography>
-                        <Button onClick={() => i18n.changeLanguage('es')} variant="contained" color="secondary" disableElevation sx={{ margin: 2, display: { xs: 'flex', md: 'none' } }}>ES</Button>
-                        <Button onClick={() => i18n.changeLanguage('en')} variant="contained" color="secondary" disableElevation sx={{ margin: 2, display: { xs: 'flex', md: 'none' } }}>EN</Button>
+                        <Button onClick={() => i18n.changeLanguage('es')} variant="text" color="warning" disableElevation sx={{ my: 2, display: { xs: 'flex', md: 'none' } }}>ES</Button>
+                        <Button onClick={() => i18n.changeLanguage('en')} variant="text" color="warning" disableElevation sx={{ my: 2, display: { xs: 'flex', md: 'none' } }}>EN</Button>
                         <Box sx={{ flexGrow: 1, justifyContent: 'flex-end', display: { xs: 'none', md: 'flex' } }}>
-                            <Button onClick={() => i18n.changeLanguage('es')} variant="contained" color="secondary" disableElevation sx={{ margin: 2 }}>ES</Button>
-                            <Button onClick={() => i18n.changeLanguage('en')} variant="contained" color="secondary" disableElevation sx={{ margin: 2 }}>EN</Button>
+                            <Button onClick={() => i18n.changeLanguage('es')} variant="text" color="warning" disableElevation sx={{ my: 2 }}>ES</Button>
+                            <Button onClick={() => i18n.changeLanguage('en')} variant="text" color="warning" disableElevation sx={{ my: 2, marginLeft: 0, marginRight: 4 }}>EN</Button>
                             {pages.map((page) => (
                             <Button
                                 key={page}
+                                color="warning"
                                 onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block', width: 120 }}
+                                sx={{ my: 2, color: 'black', display: 'block', width: 120 }}
                             >
                                 {page}
                             </Button>
@@ -133,6 +134,7 @@ const Navbar = () => {
                     </Toolbar>
                 </Container>
             </AppBar>
+            <Toolbar/>
         </div>
     );
 };
