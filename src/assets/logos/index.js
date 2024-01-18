@@ -4,3 +4,5 @@ export { default as reactLogo } from './react.png';
 export { default as nestjsLogo } from './nestjs.png';
 export { default as nodeLogo } from './node.png';
 export { default as expressjsLogo } from './expressjs.png';
+export { default as githubLogo } from './github.png';
+export { default as linkedinLogo } from './linkedin.png';
