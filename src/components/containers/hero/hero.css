@@ -1,7 +1,25 @@
 .cs_hero {
-    background-color: lightgray;
+    /* background-color: #f5f8fa; */
+    background-image: url('../../../assets/programming-1857236_1280_banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0 60px 0;
     display: flex;
     flex-direction: column;
+    row-gap: 1rem;
     justify-content: center;
     align-items: center;
+    color: white;
+    position: relative;
+}
+
+.cs_hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.70);
 }

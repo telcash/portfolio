@@ -10,7 +10,10 @@ const CsAvatar = ({size}) => {
             <Avatar
                 alt="Carlos Salazar"
                 src={avatarImg}
-                sx={{width: size ?? 24, height: size ?? 24}}
+                sx={{
+                    width: size ?? 36,
+                    height: size ?? 36,
+                }}
             >
             </Avatar>
         </div>

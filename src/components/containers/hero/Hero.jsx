@@ -1,6 +1,8 @@
 import React from "react";
 import './hero.css';
 
+import Typography from '@mui/material/Typography';
+
 import { CsAvatar } from '../../ui';
 
 import { useTranslation } from "react-i18next";
@@ -12,8 +14,35 @@ const Hero = () => {
     return (
         <div className="cs_hero">
             <CsAvatar size={120}/>
-            <h1>{t("name")}</h1>
-            <h4>{t("hero.job")}</h4>
+            <Typography
+                variant="h1"
+                component="h1"
+                zIndex={1}
+                sx={{
+                    fontFamily: 'monospace',
+                    fontWeight: 700,
+                    fontSize: 50,
+                }}
+            >
+                {t("name")}
+            </Typography>
+            <Typography
+                variant="h4"
+                component="h4"
+                zIndex={1}
+            >
+                {t("hero.job")}
+            </Typography>
+            <Typography
+            zIndex={1}
+            width='50%'
+                component="p"
+                sx={{
+                    fontSize: 16
+                }}
+            >
+                {t("hero.description")}
+            </Typography>
         </div>
     )
 }
