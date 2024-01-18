@@ -1,3 +1,10 @@
+.cs_skills {
+    padding: 60px 0;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 30px;
+}
+
 .cs_skills_containers {
     display: flex;
     flex-flow: row wrap;

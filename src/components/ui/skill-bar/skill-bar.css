@@ -6,22 +6,23 @@
 }
 
 .cs_skillBar-logo{
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     margin-right: 1rem;
 }
 
 .cs_skillBar-heading {
     width: 100px;
     height: 30px;
-    background-color: lightblue;
+    background-color: #1976d2;
     color: white;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    padding-left: 1rem;
 }
 
 .cs_skillBar-logo img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 1 / 1;
 }

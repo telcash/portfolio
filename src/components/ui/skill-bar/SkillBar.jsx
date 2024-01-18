@@ -4,6 +4,7 @@ import './skill-bar.css';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import LinearProgress from '@mui/material/LinearProgress';
+import Typography from '@mui/material/Typography';
 
 const BorderLinearProgress = styled(LinearProgress)(() => ({
     height: 30,
@@ -16,10 +17,20 @@ const SkillBar = ({logoSrc, name, progress}) => {
                 <img src={logoSrc} alt={name} />
             </div>
             <div className="cs_skillBar-heading">
-                <h3>{name}</h3>
+                <Typography
+                    variant="h3"
+                    component="h3"
+                    sx={{
+                        fontFamily: 'monospace',
+                        fontWeight: 600,
+                        fontSize: 16
+                    }}
+                >
+                    {name}
+                </Typography>
             </div>
-            <Box sx={{ width: 300 }}>
-                <BorderLinearProgress variant="determinate" value={progress} />
+            <Box sx={{ width: 300 }} >
+                <BorderLinearProgress color="primary" variant="determinate" value={progress} />
             </Box>
         </div>
     )
