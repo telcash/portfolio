@@ -9,9 +9,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
-import flowguardImg from '../../../assets/projects-img/flowguard.jpg';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
-const Project = () => {
+const Project = ({screenshot, name, giturl, weburl }) => {
     const [flipped, setFlipped] = useState(false);
 
     return (
@@ -24,8 +25,8 @@ const Project = () => {
                 <Card sx={{width: 360, height: 360}}>
                     <CardMedia
                         component="img"
-                        image={flowguardImg}
-                        alt="flowguard"
+                        image={screenshot}
+                        alt={name}
                     />
                 </Card>
             </Box>
@@ -33,18 +34,20 @@ const Project = () => {
                 <Card sx={{width: 360, height: 360, display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
                     <CardContent>
                         <Typography variant="h5" component="div">
-                            Flowguard
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                            <ul>
-                                <li>React</li>
-                                <li>CSS</li>
-                            </ul>
+                            {name}
                         </Typography>
                     </CardContent>
-                    <CardActions>
-                        <Button size="small">Share</Button>
-                        <Button size="small">Learn More</Button>
+                    <CardActions sx={{display: 'flex', justifyContent: 'center'}}>
+                        {weburl &&
+                            <Button href={weburl} target="blank">
+                                <OpenInNewIcon/>
+                            </Button>
+                        }
+                        {giturl &&
+                            <Button href={giturl} target="blank">
+                                <GitHubIcon/>
+                            </Button>
+                        }
                     </CardActions>
                 </Card>
             </Box>  
