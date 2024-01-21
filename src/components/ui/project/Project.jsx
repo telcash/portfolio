@@ -16,41 +16,42 @@ const Project = ({screenshot, name, giturl, weburl }) => {
     const [flipped, setFlipped] = useState(false);
 
     return (
-        <div 
-            className="cs_project"
+        <div
             onMouseEnter={() => setFlipped(true)}
             onMouseLeave={() => setFlipped(false)}
         >
-            <Box sx={{display: flipped ? 'none' : 'block'}}>
-                <Card sx={{width: 360, height: 360}}>
-                    <CardMedia
-                        component="img"
-                        image={screenshot}
-                        alt={name}
-                    />
-                </Card>
-            </Box>
-            <Box sx={{display: flipped ? 'block' : 'none'}}>
-                <Card sx={{width: 360, height: 360, display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
-                    <CardContent>
-                        <Typography variant="h5" component="div">
-                            {name}
-                        </Typography>
-                    </CardContent>
-                    <CardActions sx={{display: 'flex', justifyContent: 'center'}}>
-                        {weburl &&
-                            <Button href={weburl} target="blank">
-                                <OpenInNewIcon/>
-                            </Button>
-                        }
-                        {giturl &&
-                            <Button href={giturl} target="blank">
-                                <GitHubIcon/>
-                            </Button>
-                        }
-                    </CardActions>
-                </Card>
-            </Box>  
+            <div className={`cs_project ${flipped ? 'scale-in-ver-center' : ''}`}>
+                <Box sx={{display: flipped ? 'none' : 'block'}}>
+                    <Card sx={{width: 360, height: 360}}>
+                        <CardMedia
+                            component="img"
+                            image={screenshot}
+                            alt={name}
+                        />
+                    </Card>
+                </Box>
+                <Box sx={{display: flipped ? 'block' : 'none'}}>
+                    <Card sx={{width: 360, height: 360, display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+                        <CardContent>
+                            <Typography variant="h5" component="div">
+                                {name}
+                            </Typography>
+                        </CardContent>
+                        <CardActions sx={{display: 'flex', justifyContent: 'center'}}>
+                            {weburl &&
+                                <Button href={weburl} target="blank">
+                                    <OpenInNewIcon/>
+                                </Button>
+                            }
+                            {giturl &&
+                                <Button href={giturl} target="blank">
+                                    <GitHubIcon/>
+                                </Button>
+                            }
+                        </CardActions>
+                    </Card>
+                </Box>  
+            </div>
         </div>
     );
 };

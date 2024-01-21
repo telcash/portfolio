@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="cs_footer">
             <Contact />
             <SocialMedia />
-            <Typography variant="h6" align="center" mb={2} sx={{color: 'orange'}}>
+            <Typography variant="h6" align="center" mb={2} sx={{color: '#ed6c02'}}>
                 Carlos Salazar  @2024   
             </Typography>
         </div>
