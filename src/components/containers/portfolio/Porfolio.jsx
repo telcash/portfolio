@@ -35,8 +35,8 @@ const Portfolio = () => {
                 <Project
                     name="Charlie Sabores"
                     screenshot={charliesaboresJsVanilla}
-                    giturl=""
-                    weburl=""
+                    giturl="https://github.com/telcash/charlie_sabores_jsvanilla.git"
+                    weburl="https://telcash.github.io/charlie_sabores_jsvanilla/"
                 />
                 <Project/>
                 <Project/>
