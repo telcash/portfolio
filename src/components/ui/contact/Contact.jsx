@@ -26,27 +26,34 @@ const Contact = () => {
                 sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}
             >
                 <Box sx={{ maxWidth: 600, mx: "auto", p: 2}}>
-                    <Typography variant="h4" align="center" mb={2}>
+                    <Typography variant="h4" align="center" mb={2} sx={{color: '#fff'}}>
                         {t("footer.title")}
                     </Typography>
                     <form onSubmit={handleSubmit}>
-                        <TextField 
+                        <TextField
+                            sx={{backgroundColor: '#fff'}}
                             fullWidth
                             label={t("footer.contact.name")}
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                             margin="normal"
                             required
+                            size="small"
+                            variant="filled"
                         />
                         <TextField 
+                            sx={{backgroundColor: '#fff'}}
                             fullWidth
                             label={t("footer.contact.email")}
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             margin="normal"
                             required
+                            size="small"
+                            variant="filled"
                         />
-                        <TextField 
+                        <TextField
+                            sx={{backgroundColor: '#fff'}}
                             fullWidth
                             label={t("footer.contact.message")}
                             value={message}
@@ -55,8 +62,9 @@ const Contact = () => {
                             required
                             multiline
                             rows={4}
+                            variant="filled"
                         />
-                        <Button variant="contained" type="submit" sx={{ mt: 2}}>
+                        <Button variant="contained" type="submit" sx={{ mt: 2}} color="gray_clear">
                             {t("footer.contact.submit")}
                         </Button>
                     </form>

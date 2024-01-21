@@ -3,7 +3,7 @@
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 40px;
 }
 
 .cs_socialMedia-logo {
@@ -14,4 +14,5 @@
 .cs_socialMedia-logo img {
     width: 100%;
     height: auto;
+    background-color: white;
 }

@@ -9,6 +9,9 @@ const theme = createTheme({
   palette: {
     white: {
       main: '#fff'
+    },
+    gray_clear: {
+      main: '#999999' 
     }
   }
 })
