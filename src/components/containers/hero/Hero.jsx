@@ -30,6 +30,9 @@ const Hero = () => {
                 variant="h4"
                 component="h4"
                 zIndex={1}
+                sx={{
+                    fontFamily: 'monospace'
+                }}
             >
                 {t("hero.job")}
             </Typography>
@@ -38,7 +41,8 @@ const Hero = () => {
             width='50%'
                 component="p"
                 sx={{
-                    fontSize: 16
+                    fontSize: 16,
+                    fontFamily: 'monospace'
                 }}
             >
                 {t("hero.description")}

@@ -17,6 +17,10 @@ const Skills = () => {
             <Typography
                 variant="h2"
                 component="h2"
+                sx={{
+                    fontFamily: 'monospace',
+                    fontSize: 48
+                }}
             >
                 {t("skills.title")}
             </Typography>
@@ -25,6 +29,10 @@ const Skills = () => {
                     <Typography
                         variant="h3"
                         component="h3"
+                        sx={{
+                            fontFamily: 'monospace',
+                            fontSize: 32
+                        }}
                     >
                         Frontend
                     </Typography>
@@ -39,6 +47,10 @@ const Skills = () => {
                     <Typography
                         variant="h3"
                         component="h3"
+                        sx={{
+                            fontFamily: 'monospace',
+                            fontSize: 32
+                        }}
                     >
                         Backend
                     </Typography>

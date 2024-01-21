@@ -36,11 +36,13 @@ const Navbar = () => {
         setAnchorElNav(null);
     };
 
+    const barHeight = 45;
+
     return (
         <div className="cs_navbar">
-            <AppBar position="fixed" color="white">
+            <AppBar position="fixed" color="white" variant="dense" sx={{height: barHeight, minHeight: barHeight}}>
                 <Container maxWidth="xl">
-                    <Toolbar disableGutters>
+                    <Toolbar disableGutters variant="dense" sx={{height: barHeight, minHeight: barHeight}}>
                         <Typography
                             variant="h6"
                             noWrap
@@ -131,10 +133,10 @@ const Navbar = () => {
                             </Button>
                             ))}
                         </Box>
-                    </Toolbar>
+                    </Toolbar >
                 </Container>
             </AppBar>
-            <Toolbar/>
+            <Toolbar variant="dense" sx={{height: barHeight, minHeight: barHeight}}/>
         </div>
     );
 };

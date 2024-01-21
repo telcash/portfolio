@@ -1,7 +1,7 @@
 .cs_footer {
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
+    padding-top: 40px;
     padding-bottom: 40px;
     row-gap: 40px;
     background-color: #404040;

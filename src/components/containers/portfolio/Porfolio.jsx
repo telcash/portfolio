@@ -15,7 +15,7 @@ const Portfolio = () => {
     return (
         <div className="cs_portfolio">
             <div className="cs_portfolio-heading">
-                <Typography variant="h2" component="h2">
+                <Typography variant="h2" component="h2" sx={{fontFamily: 'monospace', fontSize: 48}}>
                     {t("portfolio.title")}
                 </Typography>
             </div>

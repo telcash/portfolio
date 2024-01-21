@@ -1,5 +1,6 @@
 .cs_skills {
-    padding: 60px 0;
+    padding-top: 60px;
+    padding-bottom: 80px;
     display: flex;
     flex-flow: column nowrap;
     row-gap: 30px;

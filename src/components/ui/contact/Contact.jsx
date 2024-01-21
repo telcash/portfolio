@@ -26,7 +26,7 @@ const Contact = () => {
                 sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}
             >
                 <Box sx={{ maxWidth: 600, mx: "auto", p: 2}}>
-                    <Typography variant="h4" align="center" mb={2} sx={{color: '#fff'}}>
+                    <Typography variant="h4" align="center" mb={2} sx={{ fontFamily: 'monospace', fontSize: 48, color: '#fff'}}>
                         {t("footer.title")}
                     </Typography>
                     <form onSubmit={handleSubmit}>
