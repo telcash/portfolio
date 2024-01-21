@@ -18,8 +18,8 @@ const SkillBar = ({logoSrc, name, progress}) => {
             </div>
             <div className="cs_skillBar-heading">
                 <Typography
-                    variant="h3"
-                    component="h3"
+                    variant="h5"
+                    component="h5"
                     sx={{
                         fontFamily: 'monospace',
                         fontWeight: 600,
@@ -30,7 +30,7 @@ const SkillBar = ({logoSrc, name, progress}) => {
                 </Typography>
             </div>
             <Box sx={{ width: 300 }} >
-                <BorderLinearProgress color="primary" variant="determinate" value={progress} />
+                <BorderLinearProgress color="gray_clear" variant="determinate" value={progress} />
             </Box>
         </div>
     )
