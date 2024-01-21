@@ -21,9 +21,18 @@ const Navbar = () => {
     const [t, i18n] = useTranslation("global");
 
     const pages = [
-        t("navbar.pages.skills"),
-        t("navbar.pages.projects"),
-        t("navbar.pages.contact")
+        {
+            text: t("navbar.pages.skills"),
+            linkId: '#skills'
+        },
+        {
+            text: t("navbar.pages.projects"),
+            linkId: '#portfolio'
+        },
+        {
+            text: t("navbar.pages.contact"),
+            linkId: '#footer'
+        }
     ];
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -43,25 +52,25 @@ const Navbar = () => {
             <AppBar position="fixed" color="white" variant="dense" sx={{height: barHeight, minHeight: barHeight}}>
                 <Container maxWidth="xl">
                     <Toolbar disableGutters variant="dense" sx={{height: barHeight, minHeight: barHeight}}>
-                        <Typography
-                            variant="h6"
-                            noWrap
-                            component="a"
-                            href="#app-bar-with-responsive-menu"
-                            sx={{
-                            mr: 2,
-                            display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                            textTransform: 'uppercase'
-                            }}
-                        >
-                            {t("name")}
-                        </Typography>
-
+                        <Button sx={{color: 'black'}} onClick={handleCloseNavMenu} href="#hero">
+                            <Typography
+                                variant="h6"
+                                noWrap
+                                component="a"
+                                sx={{
+                                mr: 2,
+                                display: { xs: 'none', md: 'flex' },
+                                fontFamily: 'monospace',
+                                fontWeight: 700,
+                                letterSpacing: '.3rem',
+                                color: 'inherit',
+                                textDecoration: 'none',
+                                textTransform: 'uppercase'
+                                }}
+                            >
+                                {t("name")}
+                            </Typography>
+                        </Button>
                         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                             <IconButton
                             size="large"
@@ -93,30 +102,31 @@ const Navbar = () => {
                             >
                             {pages.map((page) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center">{page}</Typography>
+                                <Typography textAlign="center">{page.text}</Typography>
                                 </MenuItem>
                             ))}
                             </Menu>
                         </Box>
-                        <Typography
-                            variant="h5"
-                            noWrap
-                            component="a"
-                            href="#app-bar-with-responsive-menu"
-                            sx={{
-                            mr: 2,
-                            display: { xs: 'flex', md: 'none' },
-                            flexGrow: 1,
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                            textTransform: 'uppercase'
-                            }}
-                        >
-                            {t("name")}
-                        </Typography>
+                        <Button sx={{color: 'black'}} onClick={handleCloseNavMenu} href="#hero">
+                            <Typography
+                                variant="h5"
+                                noWrap
+                                component="a"
+                                sx={{
+                                mr: 2,
+                                display: { xs: 'flex', md: 'none' },
+                                flexGrow: 1,
+                                fontFamily: 'monospace',
+                                fontWeight: 700,
+                                letterSpacing: '.3rem',
+                                color: 'inherit',
+                                textDecoration: 'none',
+                                textTransform: 'uppercase'
+                                }}
+                            >
+                                {t("name")}
+                            </Typography>
+                        </Button>
                         <Button onClick={() => i18n.changeLanguage('es')} variant="text" color="warning" disableElevation sx={{ my: 2, display: { xs: 'flex', md: 'none' } }}>ES</Button>
                         <Button onClick={() => i18n.changeLanguage('en')} variant="text" color="warning" disableElevation sx={{ my: 2, display: { xs: 'flex', md: 'none' } }}>EN</Button>
                         <Box sx={{ flexGrow: 1, justifyContent: 'flex-end', display: { xs: 'none', md: 'flex' } }}>
@@ -128,8 +138,9 @@ const Navbar = () => {
                                 color="warning"
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'black', display: 'block', width: 120 }}
+                                href={page.linkId}
                             >
-                                {page}
+                                {page.text}
                             </Button>
                             ))}
                         </Box>

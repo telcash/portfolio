@@ -21,11 +21,11 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <nav><Navbar/></nav>
-        <section><Hero/></section>
-        <section><Skills/></section>
-        <section><Portfolio/></section>
-        <footer><Footer/></footer>
+        <nav id='nav'><Navbar/></nav>
+        <section id='hero'><Hero/></section>
+        <section id='skills'><Skills/></section>
+        <section id='portfolio'><Portfolio/></section>
+        <footer id='footer'><Footer/></footer>
       </div>
     </ThemeProvider>
   );
