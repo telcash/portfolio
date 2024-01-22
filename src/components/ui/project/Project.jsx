@@ -12,7 +12,8 @@ import Button from '@mui/material/Button';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
-const Project = ({screenshot, name, giturl, weburl }) => {
+const Project = ({screenshot, name, description, giturl, weburl }) => {
+
     const [flipped, setFlipped] = useState(false);
 
     return (
@@ -31,10 +32,21 @@ const Project = ({screenshot, name, giturl, weburl }) => {
                     </Card>
                 </Box>
                 <Box sx={{display: flipped ? 'block' : 'none'}}>
-                    <Card sx={{width: 360, height: 360, display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
-                        <CardContent>
-                            <Typography variant="h5" component="div">
+                    <Card 
+                        sx={{
+                            width: 360,
+                            height: 360,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'space-between'
+                        }}
+                    >
+                        <CardContent sx={{height: '100%', display: 'flex', flexDirection: 'column', justifyContent:'center', alignItems: 'center'}}>
+                            <Typography variant="h5" component="div" sx={{flex: 1 }}>
                                 {name}
+                            </Typography>
+                            <Typography variant="body2" color="text.scondary" sx={{height: 200}}>
+                                {description}
                             </Typography>
                         </CardContent>
                         <CardActions sx={{display: 'flex', justifyContent: 'center'}}>

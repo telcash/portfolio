@@ -4,7 +4,7 @@ import './portfolio.css';
 import Typography from '@mui/material/Typography';
 
 import { Project } from '../../ui';
-import { flowguardScreenshot, charlieSaboresScreenshot, charliesaboresJsVanilla } from '../../../assets/projects-img';
+import { flowguardScreenshot, charlieSaboresScreenshot, charliesaboresJsVanilla, portfolioScreenshot } from '../../../assets/projects-img';
 
 import { useTranslation } from "react-i18next";
 
@@ -21,25 +21,33 @@ const Portfolio = () => {
             </div>
             <div className="cs_portfolio_projects">
                 <Project
-                    name="Charlie Sabores"
+                    name={t("portfolio.projects.charliesaboresfs.name")}
+                    description={t("portfolio.projects.charliesaboresfs.description")}
                     screenshot={charlieSaboresScreenshot}
                     giturl="https://github.com/telcash/tfmAtriumFullStack.git"
                     weburl="http://34.224.98.21/"
                 />
                 <Project 
-                    name="Flowguard"
+                    name={t("portfolio.projects.flowguard.name")}
+                    description={t("portfolio.projects.flowguard.description")}
                     screenshot={flowguardScreenshot}
                     giturl="https://github.com/telcash/flowguard_frontend.git"
                     weburl="https://glittery-lolly-acf638.netlify.app"
                 />
                 <Project
-                    name="Charlie Sabores"
+                    name={t("portfolio.projects.portfolio.name")}
+                    description={t("portfolio.projects.portfolio.description")}
+                    screenshot={portfolioScreenshot}
+                    giturl="https://github.com/telcash/portfolio.git"
+                    weburl="http://www.carlossalazar.es"
+                />
+                <Project
+                    name={t("portfolio.projects.charliesaboresjs.name")}
+                    description={t("portfolio.projects.charliesaboresjs.description")}
                     screenshot={charliesaboresJsVanilla}
                     giturl="https://github.com/telcash/charlie_sabores_jsvanilla.git"
                     weburl="https://telcash.github.io/charlie_sabores_jsvanilla/"
                 />
-                <Project/>
-                <Project/>
             </div>
         </div>
     )

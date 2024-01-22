@@ -15,7 +15,25 @@
         "title": "Skills"
     },
     "portfolio": {
-        "title": "Projects"
+        "title": "Projects",
+        "projects": {
+            "charliesaboresfs": {
+                "name": "Charlie Sabores Full Stack",
+                "description": "Online store, implemented with Angular and Angular Material on the frontend and NestJS on the Backend. MySLQ database and ORM Prisma. Deployed on a EC2 instance and RDS in Amazon Web Services."
+            },
+            "flowguard": {
+                "name": "Flowguard",
+                "description": "Landing page, implemented with React on the frontend, native CSS styles, with background animations. Deployed in Netlify"
+            },
+            "portfolio": {
+                "name": "Carlos Salazar Portfolio",
+                "description": "Website with personal portfolio. Implemented with React and MUI on the frontend, and EmailJS as a mail server."
+            },
+            "charliesaboresjs": {
+                "name": "Charlie Sabores Javascript",
+                "description": "Web page developed with HTML, CSS and native Javascript, making extensive use of javascript web components. Deployed on Github Pages."
+            }
+        }
     },
     "footer": {
         "title": "Contact",
