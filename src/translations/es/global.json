@@ -41,7 +41,10 @@
             "name": "Nombre",
             "email": "Correo electrónico",
             "message": "Mensaje",
-            "submit": "Enviar"
+            "submit": "Enviar",
+            "emailError": "Correo electrónico incorrecto",
+            "success": "Gracias por contactarme, le responderé a la brevedad posible",
+            "closeSuccess": "Cerrar"
         }
     }
 }

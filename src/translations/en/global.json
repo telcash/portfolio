@@ -41,7 +41,10 @@
             "name": "Name",
             "email": "Email",
             "message": "Message",
-            "submit": "Submit"
+            "submit": "Submit",
+            "emailError": "Invalid email",
+            "success": "Thank you for contacting me, I'll be in touch soon",
+            "closeSuccess": "Close"
         }
     }
 }

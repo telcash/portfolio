@@ -17,17 +17,38 @@ const Contact = () => {
     const form = useRef();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
+    const [isValidEmail, setIsValidEmail] = useState(false);
     const [message, setMessage] = useState("");
+    const [showSuccessModal, setShowSuccessModal] = useState(false);
+
+    const handleEmailChange = (e) => {
+        const inputEmail = e.target.value;
+        setEmail(inputEmail);
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const isValid = emailRegex.test(inputEmail);
+        setIsValidEmail(isValid);
+    }
+
+    const handleCloseModal = () => {
+        setShowSuccessModal(false);
+        setEmail('');
+        setIsValidEmail(false);
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        emailjs.sendForm('service_h98mhbp', 'template_ar0z6cg', form.current, 'cGIbf9JgXXl-yu8EN')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
+        if(isValidEmail) {
+            emailjs.sendForm('service_h98mhbp', 'template_ar0z6cg', form.current, 'cGIbf9JgXXl-yu8EN')
+                .then((result) => {
+                    setName("");
+                    setEmail("");
+                    setMessage("");
+                    setShowSuccessModal(true);
+                    console.log(result.text);
+                }, (error) => {
+                    console.log(error.text);
+                });
+        }
     };
 
     return (
@@ -53,12 +74,14 @@ const Contact = () => {
                             variant="filled"
                         />
                         <TextField
+                            error={(!isValidEmail && email !== '')}
+                            helperText={isValidEmail || email === '' ? "" : t("footer.contact.emailError")}
                             name="email" 
                             sx={{backgroundColor: '#fff'}}
                             fullWidth
                             label={t("footer.contact.email")}
                             value={email}
-                            onChange={(e) => setEmail(e.target.value)}
+                            onChange={(e) => handleEmailChange(e)}
                             margin="normal"
                             required
                             size="small"
@@ -81,6 +104,14 @@ const Contact = () => {
                             {t("footer.contact.submit")}
                         </Button>
                     </form>
+                    {showSuccessModal && (
+                        <div className="modal">
+                            <Typography mt={2} mb={1} color="#fff">
+                                {t("footer.contact.success")}
+                            </Typography>
+                            <Button variant="contained" size="small" onClick={handleCloseModal}>{t("footer.contact.closeSuccess")}</Button>
+                        </div>
+                    )}
                 </Box>
             </Box>
         </div>
