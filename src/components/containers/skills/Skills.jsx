@@ -36,12 +36,12 @@ const Skills = () => {
                     >
                         Frontend
                     </Typography>
-                    <SkillBar logoSrc={reactLogo} name={'React'} progress={75}/>
+                    <SkillBar logoSrc={reactLogo} name={'React'} progress={65}/>
                     <SkillBar logoSrc={angularLogo} name={'Angular'} progress={55}/>
-                    <SkillBar logoSrc={htmlLogo} name={'HTML'} progress={70}/>
+                    <SkillBar logoSrc={htmlLogo} name={'HTML'} progress={80}/>
                     <SkillBar logoSrc={cssLogo} name={'CSS'} progress={70}/>
                     <SkillBar logoSrc={javascriptLogo} name={'Javascript'} progress={70}/>
-                    <SkillBar logoSrc={figmaLogo} name={'Figma'} progress={70}/>
+                    <SkillBar logoSrc={figmaLogo} name={'Figma'} progress={25}/>
                 </div>
                 <div className="cs_skills-container">
                     <Typography
@@ -54,13 +54,13 @@ const Skills = () => {
                     >
                         Backend
                     </Typography>
-                    <SkillBar logoSrc={nodeLogo} name={'Node'} progress={75}/>
-                    <SkillBar logoSrc={expressjsLogo} name={'Express.js'} progress={55}/>
-                    <SkillBar logoSrc={nestjsLogo} name={'NestJS'} progress={70}/>
-                    <SkillBar logoSrc={mysqlLogo} name={'MySQL'} progress={70}/>
-                    <SkillBar logoSrc={postgresLogo} name={'Postgres'} progress={70}/>
-                    <SkillBar logoSrc={prismaLogo} name={'Prisma'} progress={70}/>
-                    <SkillBar logoSrc={mongodbLogo} name={'MongoDB'} progress={70}/>
+                    <SkillBar logoSrc={nodeLogo} name={'Node'} progress={65}/>
+                    <SkillBar logoSrc={expressjsLogo} name={'Express.js'} progress={65}/>
+                    <SkillBar logoSrc={nestjsLogo} name={'NestJS'} progress={80}/>
+                    <SkillBar logoSrc={mysqlLogo} name={'MySQL'} progress={65}/>
+                    <SkillBar logoSrc={postgresLogo} name={'Postgres'} progress={65}/>
+                    <SkillBar logoSrc={prismaLogo} name={'Prisma'} progress={65}/>
+                    <SkillBar logoSrc={mongodbLogo} name={'MongoDB'} progress={45}/>
                 </div>
             </div>
         </div>
