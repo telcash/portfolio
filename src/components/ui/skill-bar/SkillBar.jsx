@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import './skill-bar.css';
+
+import {useIsVisible} from "../../../hooks/useIsVisible";
 
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -12,20 +14,26 @@ const BorderLinearProgress = styled(LinearProgress)(() => ({
 
 const SkillBar = ({logoSrc, name, progress}) => {
 
+    const ref = useRef();
+    const isVisible = useIsVisible(ref);
+
     const [actualProgress, setActualProgress] = useState(0);
 
     useEffect(() => {
         let timer = 0;
 
         const setProgress = () => {
-            setActualProgress((oldProgress) => {
-                if (oldProgress >= progress) {
-                    return progress;
-                };
-                const newProgress = oldProgress + 10;
-                timer = setTimeout(setProgress, 50);
-                return newProgress >= progress ? progress : newProgress; 
-            })
+            if (isVisible) {
+                setActualProgress((oldProgress) => {
+                    if (oldProgress >= progress) {
+                        return progress;
+                    };
+                    const newProgress = oldProgress + 10;
+                    timer = setTimeout(setProgress, 50);
+                    return newProgress >= progress ? progress : newProgress; 
+                })
+
+            }
         }
 
         timer = setTimeout(setProgress, 50);
@@ -36,7 +44,7 @@ const SkillBar = ({logoSrc, name, progress}) => {
     });
 
     return (
-        <div className="cs_skillBar">
+        <div className="cs_skillBar" ref={ref}>
             <div className="cs_skillBar-logo">
                 <img src={logoSrc} alt={name} />
             </div>

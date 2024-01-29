@@ -15,5 +15,5 @@
 .cs_skills-container {
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: 2rem;
 }
