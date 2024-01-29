@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import './skill-bar.css';
 
 import { styled } from '@mui/material/styles';
@@ -11,6 +11,30 @@ const BorderLinearProgress = styled(LinearProgress)(() => ({
 }));
 
 const SkillBar = ({logoSrc, name, progress}) => {
+
+    const [actualProgress, setActualProgress] = useState(0);
+
+    useEffect(() => {
+        let timer = 0;
+
+        const setProgress = () => {
+            setActualProgress((oldProgress) => {
+                if (oldProgress >= progress) {
+                    return progress;
+                };
+                const newProgress = oldProgress + 10;
+                timer = setTimeout(setProgress, 50);
+                return newProgress >= progress ? progress : newProgress; 
+            })
+        }
+
+        timer = setTimeout(setProgress, 50);
+
+        return () => {
+            clearTimeout(timer);
+        }
+    });
+
     return (
         <div className="cs_skillBar">
             <div className="cs_skillBar-logo">
@@ -30,7 +54,7 @@ const SkillBar = ({logoSrc, name, progress}) => {
                 </Typography>
             </div>
             <Box sx={{ width: 300 }} >
-                <BorderLinearProgress color="gray_clear" variant="determinate" value={progress} />
+                <BorderLinearProgress color="gray_clear" variant="determinate" value={actualProgress} />
             </Box>
         </div>
     )
