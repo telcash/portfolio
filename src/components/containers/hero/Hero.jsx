@@ -22,10 +22,10 @@ const Hero = () => {
                 variant="h1"
                 component="h1"
                 zIndex={1}
+                
                 sx={{
                     fontFamily: 'monospace',
                     fontWeight: 700,
-                    fontSize: 50,
                 }}
             >
                 {t("name")}
@@ -45,10 +45,10 @@ const Hero = () => {
                 zIndex={1}
                 height={72}
                 maxWidth={600}
-                width='50%'
+                minWidth={370}
+                width='60%'
                 component="p"
                 sx={{
-                    fontSize: 16,
                     fontFamily: 'monospace'
                 }}
             >

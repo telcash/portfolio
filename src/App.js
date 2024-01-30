@@ -4,6 +4,7 @@ import './App.css';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 import { Navbar, Hero, Skills, Portfolio, Footer } from './components/containers';
+import { Height } from '@mui/icons-material';
 
 const theme = createTheme({
   palette: {
@@ -16,6 +17,28 @@ const theme = createTheme({
     }
   }
 })
+
+theme.typography.h1 = {
+  fontSize: 50,
+  '@media (max-width:600px)': {
+    fontSize: 40,
+  }
+}
+
+theme.typography.h4 = {
+  '@media (max-width:600px)': {
+    fontSize: 30,
+
+  }
+}
+
+theme.typography.p = {
+  fontSize: 16,
+  '@media (max-width:600px)': {
+    fontSize: 12,
+  },
+
+}
 
 const App = () => {
   return (
