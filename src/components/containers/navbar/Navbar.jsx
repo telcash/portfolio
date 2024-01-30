@@ -113,7 +113,6 @@ const Navbar = () => {
                                 noWrap
                                 component="a"
                                 sx={{
-                                mr: 2,
                                 display: { xs: 'flex', md: 'none' },
                                 flexGrow: 1,
                                 fontFamily: 'monospace',
@@ -127,8 +126,8 @@ const Navbar = () => {
                                 {t("name")}
                             </Typography>
                         </Button>
-                        <Button onClick={() => i18n.changeLanguage('es')} variant="text" color="warning" disableElevation sx={{ my: 2, display: { xs: 'flex', md: 'none' } }}>ES</Button>
-                        <Button onClick={() => i18n.changeLanguage('en')} variant="text" color="warning" disableElevation sx={{ my: 2, display: { xs: 'flex', md: 'none' } }}>EN</Button>
+                        <Button onClick={() => i18n.changeLanguage('es')} variant="text" color="warning" disableElevation sx={{ minWidth:30, px: 0, ml:1, my: 2, display: { xs: 'flex', md: 'none' } }}>ES</Button>
+                        <Button onClick={() => i18n.changeLanguage('en')} variant="text" color="warning" disableElevation sx={{ minWidth: 30, px: 0, my: 2, display: { xs: 'flex', md: 'none' } }}>EN</Button>
                         <Box sx={{ flexGrow: 1, justifyContent: 'flex-end', display: { xs: 'none', md: 'flex' } }}>
                             <Button onClick={() => i18n.changeLanguage('es')} variant="text" color="warning" disableElevation sx={{ my: 2 }}>ES</Button>
                             <Button onClick={() => i18n.changeLanguage('en')} variant="text" color="warning" disableElevation sx={{ my: 2, marginLeft: 0, marginRight: 4 }}>EN</Button>
