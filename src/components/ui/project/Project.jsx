@@ -11,6 +11,7 @@ import Button from '@mui/material/Button';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import CloseIcon from '@mui/icons-material/Close';
 
 const Project = ({screenshot, name, description, giturl, weburl }) => {
 
@@ -60,6 +61,9 @@ const Project = ({screenshot, name, description, giturl, weburl }) => {
                                     <GitHubIcon/>
                                 </Button>
                             }
+                            <Button onClick={() => setFlipped(false)}>
+                                <CloseIcon/>
+                            </Button>
                         </CardActions>
                     </Card>
                 </Box>  
