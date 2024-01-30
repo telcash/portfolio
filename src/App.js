@@ -4,6 +4,7 @@ import './App.css';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 import { Navbar, Hero, Skills, Portfolio, Footer } from './components/containers';
+import { fontGrid } from '@mui/material/styles/cssUtils';
 
 const theme = createTheme({
   palette: {
@@ -26,9 +27,9 @@ theme.typography.h1 = {
 }
 
 theme.typography.h4 = {
+  fontSize: 34,
   '@media (max-width:600px)': {
     fontSize: 30,
-
   }
 }
 

@@ -21,6 +21,11 @@ const Project = ({screenshot, name, description, giturl, weburl }) => {
         <div
             onMouseEnter={() => setFlipped(true)}
             onMouseLeave={() => setFlipped(false)}
+            onClick={() => {
+                if(!flipped) {
+                    setFlipped(true);
+                }
+            }}
         >
             <div className={`cs_project ${flipped ? 'scale-in-ver-center' : ''}`}>
                 <Box sx={{display: flipped ? 'none' : 'block'}}>
