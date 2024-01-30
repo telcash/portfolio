@@ -17,6 +17,7 @@ const theme = createTheme({
   }
 })
 
+
 theme.typography.h1 = {
   fontSize: 50,
   '@media (max-width:600px)': {

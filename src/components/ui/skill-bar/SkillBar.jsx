@@ -61,9 +61,11 @@ const SkillBar = ({logoSrc, name, progress}) => {
                     {name}
                 </Typography>
             </div>
-            <Box sx={{ width: 300 }} >
-                <BorderLinearProgress color="gray_clear" variant="determinate" value={actualProgress} />
-            </Box>
+            <div className="cs_skillBar-bar">
+                <Box sx={{width: '100%'}}>
+                    <BorderLinearProgress color="gray_clear" variant="determinate" value={actualProgress} />
+                </Box>
+            </div>
         </div>
     )
 }

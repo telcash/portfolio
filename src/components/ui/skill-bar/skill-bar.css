@@ -26,3 +26,19 @@
     width: 100%;
     aspect-ratio: 1 / 1;
 }
+
+.cs_skillBar-bar {
+    width: 300px;
+}
+
+@media only screen and (max-width: 500px){
+    .cs_skillBar-logo{
+        width: 35px;
+        height: 35px;
+        margin-right: 1rem;
+    }
+
+    .cs_skillBar-bar {
+        width: 200px;
+    }
+}
