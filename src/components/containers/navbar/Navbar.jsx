@@ -56,7 +56,7 @@ const Navbar = () => {
                             <Typography
                                 variant="h6"
                                 noWrap
-                                component="a"
+                                component="h6"
                                 sx={{
                                 mr: 2,
                                 display: { xs: 'none', md: 'flex' },
@@ -101,7 +101,7 @@ const Navbar = () => {
                             }}
                             >
                             {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                                <MenuItem key={page.linkId} onClick={handleCloseNavMenu}>
                                 <Typography textAlign="center">{page.text}</Typography>
                                 </MenuItem>
                             ))}
@@ -111,7 +111,7 @@ const Navbar = () => {
                             <Typography
                                 variant="h5"
                                 noWrap
-                                component="a"
+                                component="h5"
                                 sx={{
                                 display: { xs: 'flex', md: 'none' },
                                 flexGrow: 1,
@@ -133,7 +133,7 @@ const Navbar = () => {
                             <Button onClick={() => i18n.changeLanguage('en')} variant="text" color="warning" disableElevation sx={{ my: 2, marginLeft: 0, marginRight: 4 }}>EN</Button>
                             {pages.map((page) => (
                             <Button
-                                key={page}
+                                key={page.linkId}
                                 color="warning"
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'black', display: 'block', width: 120 }}
