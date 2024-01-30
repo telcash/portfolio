@@ -50,9 +50,9 @@ const Navbar = () => {
     return (
         <div className="cs_navbar">
             <AppBar position="fixed" color="white" variant="dense" sx={{height: barHeight, minHeight: barHeight}}>
-                <Container maxWidth="xl">
+                <Container maxWidth="xl" sx={{display: {xs: 'flex', md: 'block'}}}>
                     <Toolbar disableGutters variant="dense" sx={{height: barHeight, minHeight: barHeight}}>
-                        <Button sx={{color: 'black'}} onClick={handleCloseNavMenu} href="#hero">
+                        <Button sx={{color: 'black', display: { xs: 'none', md: 'block' }}} onClick={handleCloseNavMenu} href="#hero">
                             <Typography
                                 variant="h6"
                                 noWrap
@@ -71,7 +71,7 @@ const Navbar = () => {
                                 {t("name")}
                             </Typography>
                         </Button>
-                        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-start' }}>
                             <IconButton
                             size="large"
                             aria-label="account of current user"
@@ -107,7 +107,7 @@ const Navbar = () => {
                             ))}
                             </Menu>
                         </Box>
-                        <Button sx={{color: 'black'}} onClick={handleCloseNavMenu} href="#hero">
+                        <Button sx={{color: 'black', display: { xs: 'block', md: 'none' }}} onClick={handleCloseNavMenu} href="#hero">
                             <Typography
                                 variant="h5"
                                 noWrap
