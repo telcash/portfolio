@@ -32,7 +32,7 @@ const Portfolio = () => {
                     description={t("portfolio.projects.flowguard.description")}
                     screenshot={flowguardScreenshot}
                     giturl="https://github.com/telcash/flowguard_frontend.git"
-                    weburl="https://glittery-lolly-acf638.netlify.app"
+                    weburl="http://www.flowguardsolutions.com"
                 />
                 <Project
                     name={t("portfolio.projects.portfolio.name")}
