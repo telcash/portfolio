@@ -32,6 +32,10 @@
             "charliesaboresjs": {
                 "name": "Charlie Sabores Javascript",
                 "description": "Web page developed with HTML, CSS and native Javascript, making extensive use of javascript web components. Deployed on Github Pages."
+            },
+            "expressApiAuth": {
+                "name": "Express API Auth",
+                "description": "API developed in Express and MongoDB, using the passport and jsonwebtoken libraries, as a basis for applications that require user authentication and authorization functions."
             }
         }
     },

@@ -4,7 +4,7 @@ import './portfolio.css';
 import Typography from '@mui/material/Typography';
 
 import { Project } from '../../ui';
-import { flowguardScreenshot, charlieSaboresScreenshot, charliesaboresJsVanilla, portfolioScreenshot } from '../../../assets/projects-img';
+import { flowguardScreenshot, charlieSaboresScreenshot, charliesaboresJsVanilla, portfolioScreenshot, expressApiAuthScreeenshot } from '../../../assets/projects-img';
 
 import { useTranslation } from "react-i18next";
 
@@ -47,6 +47,12 @@ const Portfolio = () => {
                     screenshot={charliesaboresJsVanilla}
                     giturl="https://github.com/telcash/charlie_sabores_jsvanilla.git"
                     weburl="https://telcash.github.io/charlie_sabores_jsvanilla/"
+                />
+                <Project
+                    name={t("portfolio.projects.expressApiAuth.name")}
+                    description={t("portfolio.projects.expressApiAuth.description")}
+                    screenshot={expressApiAuthScreeenshot}
+                    giturl="https://github.com/telcash/express-api-auth.git"
                 />
             </div>
         </div>
