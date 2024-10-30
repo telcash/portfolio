@@ -3,7 +3,7 @@ import './App.css';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-import { Navbar, Hero, Skills, Portfolio, Footer } from './components/containers';
+import { NavBar, Hero, Skills, Portfolio, Footer, FullPageSlider } from './components/containers';
 import { fontGrid } from '@mui/material/styles/cssUtils';
 
 const theme = createTheme({
@@ -52,11 +52,12 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <nav id='nav'><Navbar/></nav>
+{/*         <nav id='nav'><Navbar/></nav>
         <section id='hero'><Hero/></section>
         <section id='skills'><Skills/></section>
         <section id='portfolio'><Portfolio/></section>
-        <footer id='footer'><Footer/></footer>
+        <footer id='footer'><Footer/></footer> */}
+        <FullPageSlider/>
       </div>
     </ThemeProvider>
   );
