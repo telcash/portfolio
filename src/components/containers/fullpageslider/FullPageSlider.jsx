@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { NavBar } from '../../containers';
+import { FrontendSlide, NavBar } from '../../containers';
 import { DotNav } from '../../ui';
 import { gsap } from 'gsap';
 import homeBackgroundVideo from '../../../assets/home_background.svg';
@@ -47,7 +47,7 @@ const FullPageSlider = () => {
                 <h1 style={textOverlayStyle}>Section 1</h1>
             </div>
             <div ref={(el) => (sectionsRef.current[1] = el)} style={sectionStyle(1)}>
-                <h1>Section 2</h1>
+                <FrontendSlide />
             </div>
             <div ref={(el) => (sectionsRef.current[2] = el)} style={sectionStyle(2)}>
                 <h1>Section 3</h1>
