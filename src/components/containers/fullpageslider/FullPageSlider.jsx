@@ -7,30 +7,39 @@ import homeBackgroundVideo from '../../../assets/home_background.svg';
 const FullPageSlider = () => {
     const sectionsRef = useRef([]);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const isScrollint = useRef(false);
 
     useEffect(() => {
-        gsap.set(sectionsRef.current, { yPercent: (i) => i * 100 });
-    }, []);
+        sectionsRef.current.forEach((section, i) => {
+          gsap.set(section, { yPercent: i * 100 });
+        });
+      }, []);
 
     const scrollToSection = (index) => {
+        if (isScrollint.current) return;
+        isScrollint.current = true;
         gsap.to(sectionsRef.current, {
             yPercent: -100 * index,
             ease: "power2.out",
             duration: 1,
+            onComplete: () => {
+                isScrollint.current = false;
+            },
         });
         setCurrentIndex(index);
     };
 
     const handleWheel = (e) => {
-        if (e.deltaY > 0 && currentIndex < sectionsRef.current.length - 1) {
+        const sensitivityY = 50;
+        if (e.deltaY > sensitivityY && currentIndex < sectionsRef.current.length - 1) {
             scrollToSection(currentIndex + 1);
-        } else if (e.deltaY < 0 && currentIndex > 0) {
+        } else if (e.deltaY < -1 * sensitivityY && currentIndex > 0) {
             scrollToSection(currentIndex - 1);
         }
     };
 
     return (
-        <div onWheel={handleWheel} style={{ height: "100vh", overflow: "hidden" }}>
+        <div onWheel={handleWheel} style={{ height: "100vh", overflow: "hidden", backgroundColor: "#69c0ff" }}>
             <NavBar scrollToSection={scrollToSection} currentIndex={currentIndex} />
             <DotNav scrollToSection={scrollToSection} currentIndex={currentIndex} />
             <div ref={(el) => (sectionsRef.current[0] = el)} style={sectionStyle(0)}>
@@ -43,6 +52,9 @@ const FullPageSlider = () => {
             <div ref={(el) => (sectionsRef.current[2] = el)} style={sectionStyle(2)}>
                 <h1>Section 3</h1>
             </div>
+            <div ref={(el) => (sectionsRef.current[3] = el)} style={sectionStyle(3)}>
+                <h1>Section 4</h1>
+            </div>
         </div>
     );
 };
@@ -54,6 +66,7 @@ const sectionStyle = (index) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    overflow: "hidden",
 });
 
 const VideoBackground = ({ videoSrc }) => (
