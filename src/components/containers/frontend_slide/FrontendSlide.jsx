@@ -1,30 +1,20 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { LogoBox, ProgressiveText } from "../../ui";
 import { angularLogo, reactLogo, figmaLogo } from "../../../assets/logos";
-import { gsap } from "gsap";
+import { useTranslation } from "react-i18next";
 import "./frontendslide.css";
 
 const FrontendSlide = ({ animate }) => {
-    useEffect(() => {
-        gsap.set(".fes-title", { clipPath: 'inset(0 100% 0 0)' });
-        if (animate)
-        {
-            gsap.to(".fes-title", {
-                clipPath: 'inset(0 0% 0 0)',
-                duration: 1,
-                delay: 1,
-            });
-        }
-    }, [animate]);
+    const [t] = useTranslation("global");
 
     return (
         <div className="fes-container">
             <div className="fes-item fes-title">
-                <ProgressiveText 
-                    text="Frontend Development"
+                <ProgressiveText
+                    text={t("frontend.title")}
                     textStyle={{
-                        fontSize: 72,
-                        color: 'white',
+                        fontSize: 100,
+                        color: '#5E17EB',
                         fontWeight: 'bold',
                     }}
                     animate={animate}
@@ -36,11 +26,11 @@ const FrontendSlide = ({ animate }) => {
                     logoSize={190}
                     animate={animate}
                     y={window.innerHeight}
-                    animateOptions={{ 
+                    animateOptions={{
                         duration: 2.5,
                         y: 0,
                         delay: 1,
-                        ease: "elastic(0.75, 0.3)", 
+                        ease: "elastic(0.75, 0.3)",
                     }}
                 />
             </div>
@@ -63,7 +53,19 @@ const FrontendSlide = ({ animate }) => {
                 />
             </div>
             <div className="fes-item fes-list">
-                <p style={{fontSize: 36, color: 'white'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, facere voluptate! Cupiditate perspiciatis nemo excepturi suscipit animi iste veritatis harum eveniet nihil ipsum, libero dolor voluptatum saepe in pariatur quos.</p>
+                {Array.from({ length: 5 }, (_, i) => (
+                    <div key={i} className="fest-list-li">
+                        <ProgressiveText
+                            text={t(`frontend.skills.${i + 1}`)}
+                            textStyle={{
+                                fontSize: 36,
+                                color: 'white',
+                                fontWeight: 'bold',
+                            }}
+                            animate={animate}
+                        />
+                    </div>
+                ))}
             </div>
         </div>
     );
