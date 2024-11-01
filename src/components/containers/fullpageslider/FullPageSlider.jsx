@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { FrontendSlide, Hero, NavBar } from '../../containers';
-import { DotNav } from '../../ui';
+import { DotNav, SocialMedia } from '../../ui';
 import { gsap } from 'gsap';
 import './fullpageslider.css';
 
@@ -51,6 +51,7 @@ const FullPageSlider = () => {
             <div className='slide' ref={(el) => (sectionsRef.current[2] = el)}>
                 <h1>Section 3</h1>
             </div>
+            <SocialMedia />
         </div>
     );
 };

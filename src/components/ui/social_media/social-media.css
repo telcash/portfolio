@@ -1,9 +1,13 @@
 .cs_socialMedia {
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+    width: 100%;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: end;
+    row-gap: 1em;
 }
 
 .cs_socialMedia-logo {
@@ -14,5 +18,4 @@
 .cs_socialMedia-logo img {
     width: 100%;
     height: auto;
-    background-color: white;
 }
