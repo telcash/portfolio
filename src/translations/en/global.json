@@ -13,11 +13,27 @@
     "frontend": {
         "title": "Frontend Development",
         "skills": {
-            "1": "Prototyping and UI/UX Collaboration",
-            "2": "Development and Optimization of Reusable Components",
-            "3": "Creation of Responsive and Accessible Interfaces",
-            "4": "Integration of APIs and External Services",
-            "5": "Use of Redux for State Management"
+            "1": {
+                "t": "Prototyping and UI/UX Collaboration",
+                "d": "Create prototypes and work with design to enhance the user experience."
+            },
+            "2": {
+                "t": "Reusable Components",
+                "d": "Develop and optimize components for consistency and efficiency."
+            },
+            "3": {
+                "t": "Responsive and Accessible Interfaces",
+                "d": "Design interfaces that work across all devices and are accessible."
+            },
+            "4": {
+                "t": "API Integration",
+                "d": "Connect APIs and external services for added functionality."
+            },
+            "5": {
+                "t": "State Management with Redux",
+                "d": "Use Redux to manage the state of complex applications."
+            }
+
         }
     }
 }

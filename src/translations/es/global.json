@@ -14,11 +14,26 @@
     "frontend": {
         "title": "Desarrollo Frontend",
         "skills": {
-            "1": "Creación de prototipos y colaboración en UI/UX",
-            "2": "Desarrollo y optimización de componentes reutilizables",
-            "3": "Creación de interfaces adaptables y accesibles",
-            "4": "Integración de APIs y servicios externos",
-            "5": "Uso de Redux para la gestión de estado"
+            "1": {
+                "t": "Prototipos y colaboración en UI/UX",
+                "d": "Crear prototipos y trabajar con diseño para mejorar la experiencia de usuario."
+            },
+            "2": {
+                "t": "Componentes reutilizables",
+                "d": "Desarrollar y optimizar componentes para consistencia y eficiencia."
+            },
+            "3": {
+                "t": "Interfaces adaptables y accesibles",
+                "d": "Diseñar interfaces que funcionen en todos los dispositivos y sean accesibles"
+            },
+            "4": {
+                "t": "Integración de APIs",
+                "d": "Conectar APIs y servicios externos para m{as funcionalidad."
+            },
+            "5": {
+                "t": "Gestión de estado con Redux",
+                "d": "Usar Redux para manegar el estado de aplicaciones complejas."
+            }
         }
     }
 }
