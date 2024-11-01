@@ -1,0 +1,44 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    column-gap: 4em;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: none;
+    padding: 10px;
+    padding-right: 20px;
+    z-index: 1000;
+}
+
+.navbar-button {
+    background: none;
+    border: none;
+    margin: 0, 10px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.navbar-button.active {
+    color: #BD7643;
+    font-weight: bolder;
+}
+
+.navbar-button-sub {
+    text-decoration: none;
+    position: relative;
+}
+
+.navbar-button-sub.active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    color: #BD7643;
+    left: 0;
+    background-color: currentColor;
+}

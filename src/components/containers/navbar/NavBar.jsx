@@ -1,40 +1,19 @@
 import React from 'react';
-
-const navStyle = {
-  position: "fixed",
-  top: 0,
-  width: "100%",
-  display: "flex",
-  justifyContent: "center",
-  backgroundColor: "none",
-  padding: "10px",
-  //boxShadow: "0px 4px 8px rgba(0,0,0,0.1)",
-  zIndex: 1000,
-};
-
-const buttonStyle = {
-  background: "none",
-  border: "none",
-  margin: "0 10px",
-  padding: "10px",
-  cursor: "pointer",
-  fontSize: "16px",
-};
+import { useTranslation } from "react-i18next";
+import './navbar.css';
 
 const NavBar = ({ scrollToSection, currentIndex }) => {
-  const sections = ["Section 1", "Section 2", "Section 3"];
+  const [t] = useTranslation("global");
+  const sections = [t("navbar.home"), t("navbar.frontend"), t("navbar.backend"), t("navbar.portfolio", t("navbar.contact"))];
   return (
-    <div style={navStyle}>
+    <div className='navbar'>
       {sections.map((section, index) => (
         <button
+        className={`navbar-button ${currentIndex === index ? "active" : ""}`}
           key={index}
           onClick={() => scrollToSection(index)}
-          style={{
-            ...buttonStyle,
-            fontWeight: currentIndex === index ? "bold" : "normal",
-          }}
         >
-          {section}
+          <span className={`navbar-button-sub ${currentIndex === index ? "active" : ""}`}>{section}</span>
         </button>
       ))}
     </div>

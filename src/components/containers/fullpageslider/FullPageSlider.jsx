@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { FrontendSlide, NavBar } from '../../containers';
+import { FrontendSlide, Hero, NavBar } from '../../containers';
 import { DotNav } from '../../ui';
 import { gsap } from 'gsap';
 import './fullpageslider.css';
@@ -43,7 +43,7 @@ const FullPageSlider = () => {
             <NavBar scrollToSection={scrollToSection} currentIndex={currentIndex} />
             <DotNav scrollToSection={scrollToSection} currentIndex={currentIndex} />
             <div className='slide' ref={(el) => (sectionsRef.current[0] = el)}>
-                <h1>Section 1</h1>
+                <Hero />
             </div>
             <div className='slide' ref={(el) => (sectionsRef.current[1] = el)} style={{backgroundColor: "#539E93"}}>
                 <FrontendSlide animate = {currentIndex === 1} />

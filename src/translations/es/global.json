@@ -1,4 +1,16 @@
 {
+    "navbar": {
+        "home": "Inicio",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "portfolio": "Portafolio",
+        "contact": "Contacto"
+    },
+    "hero": {
+        "title": "Carlos Salazar",
+        "subtitle": "Desarrollador Web Full Stack",
+        "description": "Apasionado del backend, con un gusto por diseños e interfaces simples e intuitivas. Actualmente enfocado en el Stack PostgreSQL-NestJS-React"
+    },
     "frontend": {
         "title": "Desarrollo Frontend",
         "skills": {

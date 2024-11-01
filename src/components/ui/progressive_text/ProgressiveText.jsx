@@ -15,7 +15,7 @@ const ProgressiveText = ({ text, textStyle, animate }) => {
     }, [animate]);
     
     return (
-        <div className="progressive-text" style={{...textStyle, display: 'inline-block', whiteSpace: 'nowrap'}}>{text}</div>
+        <div className="progressive-text" style={{...textStyle}}>{text}</div>
     );
 }
 export default ProgressiveText;

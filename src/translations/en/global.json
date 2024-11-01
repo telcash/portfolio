@@ -1,4 +1,15 @@
 {
+    "navbar": {
+        "home": "Home",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+    },
+    "hero": {
+        "title": "Carlos Salazar",
+        "subtitle": "Full Stack Web Developer"
+    },
     "frontend": {
         "title": "Frontend Development",
         "skills": {
