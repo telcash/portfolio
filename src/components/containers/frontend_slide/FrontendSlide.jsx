@@ -1,5 +1,6 @@
 import React from "react";
 import { LogoBox, ProgressiveText } from "../../ui";
+import { figmaLogo, reactLogo, angularLogo } from "../../../assets/logos";
 import { useTranslation } from "react-i18next";
 import "./frontendslide.css";
 
@@ -23,6 +24,7 @@ const FrontendSlide = ({ animate }) => {
                 <div className="fes-logos">
                     <div className="logo-figma">
                         <LogoBox
+                            logoImg={figmaLogo}
                             logoSize={80}
                             animate={animate}
                             x={-window.innerWidth}
@@ -31,6 +33,7 @@ const FrontendSlide = ({ animate }) => {
                     </div>
                     <div className="logo-react">
                         <LogoBox
+                            logoImg={reactLogo}
                             logoSize={200}
                             animate={animate}
                             scale={0}
@@ -39,6 +42,7 @@ const FrontendSlide = ({ animate }) => {
                     </div>
                     <div className="logo-angular">
                         <LogoBox
+                            logoImg={angularLogo} 
                             logoSize={140}
                             animate={animate}
                             y={window.innerHeight}

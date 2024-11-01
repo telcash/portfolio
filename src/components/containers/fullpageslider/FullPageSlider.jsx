@@ -39,13 +39,13 @@ const FullPageSlider = () => {
     };
 
     return (
-        <div onWheel={handleWheel} style={{ height: "100vh", overflow: "hidden", backgroundColor: "#69c0ff" }}>
+        <div onWheel={handleWheel} style={{ height: "100vh", overflow: "hidden", backgroundColor: "#5799B8" }}>
             <NavBar scrollToSection={scrollToSection} currentIndex={currentIndex} />
             <DotNav scrollToSection={scrollToSection} currentIndex={currentIndex} />
             <div className='slide' ref={(el) => (sectionsRef.current[0] = el)}>
                 <Hero />
             </div>
-            <div className='slide' ref={(el) => (sectionsRef.current[1] = el)} style={{backgroundColor: "#539E93"}}>
+            <div className='slide' ref={(el) => (sectionsRef.current[1] = el)} style={{backgroundColor: "#5799B8"}}>
                 <FrontendSlide animate = {currentIndex === 1} />
             </div>
             <div className='slide' ref={(el) => (sectionsRef.current[2] = el)}>
