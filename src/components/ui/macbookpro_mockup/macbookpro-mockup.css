@@ -20,7 +20,7 @@
     display: block;
 }
 
-.inside-img {
+.macbook-inside-img {
     z-index: -1;
     position: absolute;
     width: 602px;
@@ -30,7 +30,7 @@
     overflow: hidden;
 }
 
-.inside-img img {
+.macbook-inside-img img {
     padding-bottom: 10rem;
     width: 100%;
     height: auto;

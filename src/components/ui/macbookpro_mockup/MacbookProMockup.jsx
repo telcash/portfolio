@@ -24,7 +24,7 @@ const MacbookProMockup = ({ animate, scrollingImg, yImg }) => {
         <div className='macbookpro-mockup'>
             <div className='macbookpro-mockup-img'>
                 <img src={macbookpro} alt="" />
-                <div className='inside-img' ref={imgRef}>
+                <div className='macbook-inside-img' ref={imgRef}>
                     <img src={scrollingImg} alt="" />
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import React, { useRef, useState} from 'react';
 import { gsap } from 'gsap';
-import { flowguardPc } from '../../../assets/projects-img';
+import { flowguardPc, flowguardPhone } from '../../../assets/projects-img';
 import ProjectSlide from '../project_slide/ProjectSlide';
 import './portfolio-slider.css';
 
@@ -37,6 +37,8 @@ const PortfolioSlider = ({ animate }) => {
                         animate={animate && currentIndex === 0}
                         imagePc={flowguardPc}
                         imagePcY={1200}
+                        imagePhone={flowguardPhone}
+                        imagePhoneY={1200}
                     />
                 </div>
                 <div className='horizontal-slide' ref={(el) => (sectionsRef.current[1] = el)}>
