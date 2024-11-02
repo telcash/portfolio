@@ -12,11 +12,6 @@ const FrontendSlide = ({ animate }) => {
             <div className="fes-title">
                 <ProgressiveText
                     text={t("frontend.title")}
-                    textStyle={{
-                        fontSize: 70,
-                        color: '#d9d9d9',
-                        fontWeight: 'bold',
-                    }}
                     animate={animate}
                 />
             </div>
@@ -25,7 +20,7 @@ const FrontendSlide = ({ animate }) => {
                     <div className="logo-figma">
                         <LogoBox
                             logoImg={figmaLogo}
-                            logoSize={80}
+                            logoSize={100}
                             animate={animate}
                             x={-window.innerWidth}
                             animateOptions={{ duration: 1.5, x: 0, rotation: 720, delay: 1 }}
@@ -43,7 +38,7 @@ const FrontendSlide = ({ animate }) => {
                     <div className="logo-angular">
                         <LogoBox
                             logoImg={angularLogo} 
-                            logoSize={120}
+                            logoSize={125}
                             animate={animate}
                             y={window.innerHeight}
                             animateOptions={{
@@ -57,28 +52,20 @@ const FrontendSlide = ({ animate }) => {
                 </div>
                 <div className="fes-list">
                     {Array.from({ length: 5 }, (_, i) => (
-                        <div key={i} className="fes-list-li">
-                            <ProgressiveText
-                                text={t(`frontend.skills.${i + 1}.t`)}
-                                textStyle={{
-                                    textAlign: 'left',
-                                    fontSize: 24,
-                                    color: '#5E17EB',
-                                    fontWeight: 'bold',
-                                }}
-                                animate={animate}
-                            />
-                            <ProgressiveText
-                                text={t(`frontend.skills.${i + 1}.d`)}
-                                textStyle={{
-                                    textAlign: 'left',
-                                    marginLeft: 20,
-                                    fontSize: 18,
-                                    color: '#d9d9d9',
-                                    fontWeight: 'bold',
-                                }}
-                                animate={animate}
-                            />
+                        <div key={i}>
+                            <div className="fest-list-subtitle">
+                                <ProgressiveText
+                                    text={t(`frontend.skills.${i + 1}.t`)}
+                                    animate={animate}
+                                />
+                            </div>
+                            <div className="fest-list-description">
+                                <ProgressiveText
+                                    className="fes-list-description"
+                                    text={t(`frontend.skills.${i + 1}.d`)}
+                                    animate={animate}
+                                />
+                            </div>
                         </div>
                     ))}
                 </div>
