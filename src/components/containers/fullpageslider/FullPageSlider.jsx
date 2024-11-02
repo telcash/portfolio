@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { BackendSlide, FrontendSlide, Hero, NavBar } from '../../containers';
+import { BackendSlide, FrontendSlide, Hero, NavBar, PortfolioSlider } from '../../containers';
 import { DotNav } from '../../ui';
 import { gsap } from 'gsap';
 import './fullpageslider.css';
@@ -50,6 +50,9 @@ const FullPageSlider = () => {
             </div>
             <div className='slide backend' ref={(el) => (sectionsRef.current[2] = el)}>
                 <BackendSlide animate = {currentIndex === 2} />
+            </div>
+            <div className='slide portfolio' ref={(el) => (sectionsRef.current[3] = el)}>
+                <PortfolioSlider animate = {currentIndex === 3} />
             </div>
         </div>
     );

@@ -1,7 +1,7 @@
 const DotNav = ({ scrollToSection, currentIndex }) => {
     return (
         <div style={dotNavStyle}>
-            {[0, 1, 2].map((index) => (
+            {[0, 1, 2, 3].map((index) => (
                 <div
                     key={index}
                     onClick={() => scrollToSection(index)}

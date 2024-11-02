@@ -1,0 +1,45 @@
+.portfolio-slider {
+    margin-top: 65px;
+    display: flex;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.portfolio-slider-container {
+    display: flex;
+    width: 300vw;
+    height: 100%;
+}
+
+.horizontal-slide {
+    flex: 0 0 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-arrow {
+    position: absolute;
+    top: 50%;
+    left: 10rem;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    cursor: pointer;
+    background: "transparent";
+    border: "none";
+    color: "#333";
+}
+
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    right: 10rem;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    cursor: pointer;
+    background: "transparent";
+    border: "none";
+    color: "#333";
+}
