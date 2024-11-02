@@ -12,7 +12,7 @@ const Hero = () => {
                     <img src={logo} alt="logo" />
                 </div>
                 <div className="hero-header-title">
-                    <h1 className="title">{t("hero.title")}</h1>
+                    <div className="title">{t("hero.title")}</div>
                     <p className="subtitle">{t("hero.subtitle")}</p>
                 </div>
             </div>
