@@ -57,7 +57,7 @@ const FrontendSlide = ({ animate }) => {
                 </div>
                 <div className="fes-list">
                     {Array.from({ length: 5 }, (_, i) => (
-                        <div key={i} className="fest-list-li">
+                        <div key={i} className="fes-list-li">
                             <ProgressiveText
                                 text={t(`frontend.skills.${i + 1}.t`)}
                                 textStyle={{

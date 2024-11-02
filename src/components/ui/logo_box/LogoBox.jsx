@@ -9,7 +9,7 @@ const LogoBox = ({ logoImg, logoSize, animate, animateOptions, x, y, scale }) =>
         () => {
             gsap.set(container.current, { x: x ?? 0, y: y ?? 0 , rotation: 0, scale: scale ?? 1 });
             if (animate) {
-                gsap.to(container.current, animateOptions);
+                gsap.to(container.current, animateOptions || {});
             }
         },
         [animate, animateOptions, x, y, scale]

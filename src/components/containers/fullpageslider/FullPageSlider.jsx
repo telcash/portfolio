@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { FrontendSlide, Hero, NavBar } from '../../containers';
+import { BackendSlide, FrontendSlide, Hero, NavBar } from '../../containers';
 import { DotNav, SocialMedia } from '../../ui';
 import { gsap } from 'gsap';
 import './fullpageslider.css';
@@ -48,10 +48,9 @@ const FullPageSlider = () => {
             <div className='slide' ref={(el) => (sectionsRef.current[1] = el)} style={{backgroundColor: "#5799B8"}}>
                 <FrontendSlide animate = {currentIndex === 1} />
             </div>
-            <div className='slide' ref={(el) => (sectionsRef.current[2] = el)}>
-                <h1>Section 3</h1>
+            <div className='slide' ref={(el) => (sectionsRef.current[2] = el)} style={{backgroundColor: "#64B07E"}}>
+                <BackendSlide animate = {currentIndex === 2} />
             </div>
-            <SocialMedia />
         </div>
     );
 };

@@ -1,15 +1,14 @@
-.fes-container {
+.bes-container {
     margin-top: 65px;
     display: flex;
     width: 100%;
     height: 100vh;
-    max-width: 1366px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.fes-title {
+.bes-title {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -17,7 +16,7 @@
     padding-top: 40px;
 }
 
-.fes-content {
+.bes-content {
     display: flex;
     width: 100%;
     height: 100%;
@@ -26,7 +25,7 @@
     flex-direction: row nowrap;
 }
 
-.fes-logos {
+.bes-logos {
     flex: 30%;
     display: flex;
     width: 100%;
@@ -36,33 +35,7 @@
     flex-direction: column;
 }
 
-.logo-figma {
-    width: 100%;
-    flex: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 40%;
-}
-
-.logo-react {
-    width: 100%;
-    flex: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 40%;
-}
-
-.logo-angular {
-    width: 100%;
-    flex: 35%;
-    padding-left: 40%;
-    display: flex;
-    justify-content: center;
-}
-
-.fes-list {
+.bes-list {
     width: 100%;
     height: 100%;
     flex: 70%;
@@ -71,5 +44,5 @@
     justify-content: flex-start;
     align-items: flex-start;
     row-gap: 30px;
-    padding: 4em 18em 2em 2em;
+    padding: 4em 2em 2em 18em;
 }

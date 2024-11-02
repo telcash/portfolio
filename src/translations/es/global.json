@@ -35,5 +35,30 @@
                 "d": "Usar Redux para manegar el estado de aplicaciones complejas."
             }
         }
+    },
+    "backend": {
+        "title": "Desarrollo Backend",
+        "skills": {
+            "1": {
+                "t": "Prototipos y colaboración en UI/UX",
+                "d": "Crear prototipos y trabajar con diseño para mejorar la experiencia de usuario."
+            },
+            "2": {
+                "t": "Componentes reutilizables",
+                "d": "Desarrollar y optimizar componentes para consistencia y eficiencia."
+            },
+            "3": {
+                "t": "Interfaces adaptables y accesibles",
+                "d": "Diseñar interfaces que funcionen en todos los dispositivos y sean accesibles"
+            },
+            "4": {
+                "t": "Integración de APIs",
+                "d": "Conectar APIs y servicios externos para m{as funcionalidad."
+            },
+            "5": {
+                "t": "Gestión de estado con Redux",
+                "d": "Usar Redux para manegar el estado de aplicaciones complejas."
+            }
+        }
     }
 }
