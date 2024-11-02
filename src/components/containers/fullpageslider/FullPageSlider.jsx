@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { BackendSlide, FrontendSlide, Hero, NavBar } from '../../containers';
-import { DotNav, SocialMedia } from '../../ui';
+import { DotNav } from '../../ui';
 import { gsap } from 'gsap';
 import './fullpageslider.css';
 
@@ -39,16 +39,16 @@ const FullPageSlider = () => {
     };
 
     return (
-        <div onWheel={handleWheel} style={{ height: "100vh", overflow: "hidden", backgroundColor: "#5799B8" }}>
+        <div className='slide-container' onWheel={handleWheel}>
             <NavBar scrollToSection={scrollToSection} currentIndex={currentIndex} />
             <DotNav scrollToSection={scrollToSection} currentIndex={currentIndex} />
-            <div className='slide' ref={(el) => (sectionsRef.current[0] = el)}>
+            <div className='slide hero' ref={(el) => (sectionsRef.current[0] = el)}>
                 <Hero />
             </div>
-            <div className='slide' ref={(el) => (sectionsRef.current[1] = el)} style={{backgroundColor: "#5799B8"}}>
+            <div className='slide frontend' ref={(el) => (sectionsRef.current[1] = el)}>
                 <FrontendSlide animate = {currentIndex === 1} />
             </div>
-            <div className='slide' ref={(el) => (sectionsRef.current[2] = el)} style={{backgroundColor: "#64B07E"}}>
+            <div className='slide backend' ref={(el) => (sectionsRef.current[2] = el)}>
                 <BackendSlide animate = {currentIndex === 2} />
             </div>
         </div>
