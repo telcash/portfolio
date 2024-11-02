@@ -12,11 +12,6 @@ const BackendSlide = ({ animate }) => {
             <div className="bes-title">
                 <ProgressiveText
                     text={t("backend.title")}
-                    textStyle={{
-                        fontSize: 70,
-                        color: '#d9d9d9',
-                        fontWeight: 'bold',
-                    }}
                     animate={animate}
                 />
             </div>
@@ -24,27 +19,18 @@ const BackendSlide = ({ animate }) => {
                 <div className="bes-list">
                     {Array.from({ length: 5 }, (_, i) => (
                         <div key={i} className="bes-list-li">
-                            <ProgressiveText
-                                text={t(`backend.skills.${i + 1}.t`)}
-                                textStyle={{
-                                    textAlign: 'left',
-                                    fontSize: 24,
-                                    color: '#5E17EB',
-                                    fontWeight: 'bold',
-                                }}
-                                animate={animate}
-                            />
-                            <ProgressiveText
-                                text={t(`backend.skills.${i + 1}.d`)}
-                                textStyle={{
-                                    textAlign: 'left',
-                                    marginLeft: 20,
-                                    fontSize: 18,
-                                    color: '#d9d9d9',
-                                    fontWeight: 'bold',
-                                }}
-                                animate={animate}
-                            />
+                            <div className="best-list-subtitle">
+                                <ProgressiveText
+                                    text={t(`backend.skills.${i + 1}.t`)}
+                                    animate={animate}
+                                />
+                            </div>
+                            <div className="best-list-description">
+                                <ProgressiveText
+                                    text={t(`backend.skills.${i + 1}.d`)}
+                                    animate={animate}
+                                />
+                            </div>
                         </div>
                     ))}
                 </div>
@@ -54,27 +40,37 @@ const BackendSlide = ({ animate }) => {
                             logoImg={nodeLogo}
                             logoSize={80}
                             animate={animate}
+                            opacity={0}
+                            y={-window.innerHeight}
+                            animateOptions={{ duration: 3, y: 0, opacity: 1, delay: 1 }}
                         />
                     </div>
-                    <div className="logo-mongo">
+                    <div className="logo-mongodb">
                         <LogoBox
                             logoImg={mongodbLogo}
-                            logoSize={80}
+                            logoSize={100}
+                            clipPath={'inset(0 100% 0 0)'}
                             animate={animate}
+                            animateOptions={{ duration: 3, clipPath: 'inset(0 0% 0 0)', delay: 1 }}
                         />
                     </div>
                     <div className="logo-oracle">
                         <LogoBox
                             logoImg={oracleLogo}
-                            logoSize={80}
+                            logoSize={120}
+                            opacity={0}
+                            x={-window.innerWidth}
                             animate={animate}
+                            animateOptions={{ duration: 3, x: 0, opacity: 1, delay: 1, ease: "power1.in" }}
                         />
                     </div>
                     <div className="logo-nest">
                         <LogoBox
                             logoImg={nestLogo}
-                            logoSize={80}
+                            logoSize={140}
                             animate={animate}
+                            scale={0}
+                            animateOptions={{ duration: 3, scale: 1, delay: 1, ease: "elastic(0.75, 0.3)" }}
                         />
                     </div>
                 </div>
