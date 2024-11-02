@@ -23,7 +23,7 @@ const FrontendSlide = ({ animate }) => {
                             logoSize={100}
                             animate={animate}
                             x={-window.innerWidth}
-                            animateOptions={{ duration: 2, x: 0, rotation: 720, delay: 1 }}
+                            animateOptions={[{ duration: 2, x: 0, rotation: 720, delay: 1 }]}
                         />
                     </div>
                     <div className="logo-react">
@@ -32,7 +32,7 @@ const FrontendSlide = ({ animate }) => {
                             logoSize={150}
                             animate={animate}
                             scale={0}
-                            animateOptions={{ duration: 2, rotation: 360, delay: 1, scale: 1 }}
+                            animateOptions={[{ duration: 2, rotation: 360, delay: 1, scale: 1 }]}
                         />
                     </div>
                     <div className="logo-angular">
@@ -41,12 +41,12 @@ const FrontendSlide = ({ animate }) => {
                             logoSize={125}
                             animate={animate}
                             y={window.innerHeight}
-                            animateOptions={{
-                                duration: 3.5,
+                            animateOptions={[{
+                                duration: 2,
                                 y: 0,
                                 delay: 1,
                                 ease: "elastic(0.75, 0.3)",
-                            }}
+                            }]}
                         />
                     </div>
                 </div>

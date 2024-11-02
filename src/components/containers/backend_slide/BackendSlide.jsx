@@ -40,9 +40,13 @@ const BackendSlide = ({ animate }) => {
                             logoImg={nodeLogo}
                             logoSize={80}
                             animate={animate}
-                            opacity={0}
                             y={-window.innerHeight}
-                            animateOptions={{ duration: 3, y: 0, opacity: 1, delay: 1 }}
+                            animateOptions={[{
+                                duration: 2,
+                                y: 0,
+                                delay: 1,
+                                ease: "elastic(0.75, 0.3)",
+                            }]}
                         />
                     </div>
                     <div className="logo-mongodb">
@@ -51,7 +55,7 @@ const BackendSlide = ({ animate }) => {
                             logoSize={100}
                             clipPath={'inset(0 100% 0 0)'}
                             animate={animate}
-                            animateOptions={{ duration: 3, clipPath: 'inset(0 0% 0 0)', delay: 1 }}
+                            animateOptions={[{ duration: 3, clipPath: 'inset(0 0% 0 0)', delay: 1 }]}
                         />
                     </div>
                     <div className="logo-oracle">
@@ -61,7 +65,7 @@ const BackendSlide = ({ animate }) => {
                             opacity={0}
                             x={-window.innerWidth}
                             animate={animate}
-                            animateOptions={{ duration: 3, x: 0, opacity: 1, delay: 1, ease: "power1.in" }}
+                            animateOptions={[{ duration: 3, x: 0, opacity: 1, delay: 1, ease: "power1.in" }]}
                         />
                     </div>
                     <div className="logo-nest">
@@ -70,7 +74,7 @@ const BackendSlide = ({ animate }) => {
                             logoSize={140}
                             animate={animate}
                             scale={0}
-                            animateOptions={{ duration: 3, scale: 1, delay: 1, ease: "elastic(0.75, 0.3)" }}
+                            animateOptions={[{ duration: 3, scale: 1, delay: 1, ease: "elastic(0.75, 0.3)" }]}
                         />
                     </div>
                 </div>

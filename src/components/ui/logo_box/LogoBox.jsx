@@ -18,8 +18,10 @@ const LogoBox = ({ logoImg, logoSize, animate, animateOptions, x, y, rotation, s
                 }
             );
             if (animate) {
-                gsap.to(container.current, animateOptions || {});
-            }
+                animateOptions.forEach((option) => {
+                    gsap.to(container.current, option);
+                });
+            };
         },
         [animate, animateOptions, x, y, rotation, scale, opacity, clipPath]
     );
