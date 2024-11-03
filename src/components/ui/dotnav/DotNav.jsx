@@ -1,38 +1,21 @@
+import React from "react";
+import "./dotnav.css";
+
 const DotNav = ({ scrollToSection, currentIndex }) => {
     return (
-        <div style={dotNavStyle}>
-            {[0, 1, 2, 3].map((index) => (
+        <div className="dotnav">
+            {[0, 1, 2, 3, 4].map((index) => (
                 <div
                     key={index}
                     onClick={() => scrollToSection(index)}
+                    className="dot"
                     style={{
-                        ...dotStyle,
-                        backgroundColor: currentIndex === index ? "#333" : "#ccc",
+                        backgroundColor: currentIndex === index ? "#BD7643" : "#ccc",
                     }}
                 />
             ))}
         </div>
     );
-};
-
-
-const dotNavStyle = {
-    position: "fixed",
-    right: "20px",
-    top: "50%",
-    transform: "translateY(-50%)",
-    display: "flex",
-    flexDirection: "column",
-    gap: "10px",
-    zIndex: 1000,
-};
-
-const dotStyle = {
-    width: "12px",
-    height: "12px",
-    borderRadius: "50%",
-    cursor: "pointer",
-    transition: "background-color 0.3s ease",
 };
 
 export default DotNav;

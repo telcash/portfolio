@@ -60,5 +60,14 @@
                 "d": "Usar Redux para manegar el estado de aplicaciones complejas."
             }
         }
+    },
+    "contact": {
+        "name": "Nombre",
+        "email": "Correo electrónico",
+        "message": "Mensaje",
+        "submit": "Enviar",
+        "emailError": "Correo electrónico incorrecto",
+        "success": "Gracias por contactarme, le responderé a la brevedad posible",
+        "closeSuccess": "Cerrar"
     }
 }

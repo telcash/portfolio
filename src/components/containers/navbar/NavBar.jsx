@@ -6,7 +6,7 @@ import './navbar.css';
 
 const NavBar = ({ scrollToSection, currentIndex }) => {
   const [t] = useTranslation("global");
-  const sections = [t("navbar.home"), t("navbar.frontend"), t("navbar.backend"), t("navbar.portfolio", t("navbar.contact"))];
+  const sections = [t("navbar.home"), t("navbar.frontend"), t("navbar.backend"), t("navbar.portfolio"), t("navbar.contact")];
   return (
     <div className='navbar'>
       <div className={`navbar-logo ${currentIndex === 0 ? "disable" : ""}`}>
