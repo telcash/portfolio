@@ -118,14 +118,26 @@ const ContactForm = () => {
                                     {t("contact.submit")}
                                 </Button>
                             </form>
-                            {showSuccessModal && (
-                                <div className="modal">
-                                    <Typography mt={2} mb={1} color="#fff">
-                                        {t("contact.success")}
-                                    </Typography>
-                                    <Button variant="contained" size="small" onClick={handleCloseModal}>{t("contact.closeSuccess")}</Button>
-                                </div>
-                            )}
+                            <div className="modal"
+                                style={{visibility: showSuccessModal ? 'visible' : 'hidden'}}
+                            >
+                                <Typography mt={2}
+                                    mb={1}
+                                    color="#fff"
+                                    fontSize={'1.6rem'}
+                                >
+                                    {t("contact.success")}
+                                </Typography>
+                                <Button 
+                                    variant="contained"
+                                    color="gray_clear"
+                                    size="small"
+                                    onClick={handleCloseModal}
+                                    sx={{ mt: 2, ":hover": {backgroundColor: '#BD7643'}, fontSize: '1.25rem', fontFamily: 'sans-serif'}}
+                                >
+                                    {t("contact.closeSuccess")}
+                                </Button>
+                            </div>
                         </Box>
                     </Box>
                 </div>
