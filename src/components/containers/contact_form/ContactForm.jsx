@@ -4,7 +4,6 @@ import logoBlanco from "../../../assets/logo-blanco.png";
 import "./contact-form.css";
 import { Box, Button, TextField, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import { hover } from "@testing-library/user-event/dist/hover";
 
 const ContactForm = () => {
 

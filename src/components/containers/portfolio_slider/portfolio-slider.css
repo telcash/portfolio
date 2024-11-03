@@ -20,26 +20,22 @@
     align-items: center;
 }
 
-.left-arrow {
+.left-arrow, .right-arrow {
+    border: unset;
     position: absolute;
     top: 50%;
-    left: 10rem;
     transform: translateY(-50%);
-    font-size: 2rem;
+    font-size: 5rem;
+    font-weight: bolder;
     cursor: pointer;
-    background: "transparent";
-    border: "none";
-    color: "#333";
+    background-color: transparent;
+    color: white;
+}
+
+.left-arrow {
+    left: 10rem;
 }
 
 .right-arrow {
-    position: absolute;
-    top: 50%;
     right: 10rem;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    cursor: pointer;
-    background: "transparent";
-    border: "none";
-    color: "#333";
 }

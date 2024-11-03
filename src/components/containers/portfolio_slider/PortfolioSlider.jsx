@@ -48,8 +48,8 @@ const PortfolioSlider = ({ animate }) => {
                     <h2>Proyecto 3</h2>
                 </div>
             </div>
-            <button className='left-arrow' onClick={handleLeftArrowClick}>-</button>
-            <button className='right-arrow' onClick={handleRightArrowClick}>+</button>
+            <button className='left-arrow' onClick={handleLeftArrowClick}>&lt;</button>
+            <button className='right-arrow' onClick={handleRightArrowClick}>&gt;</button>
         </div>
     );
 }
