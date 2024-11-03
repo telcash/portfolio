@@ -5,6 +5,7 @@
 }
 
 .slide {
+    padding-top: 65px;
     height: 100vh;
     position: relative;
     display: flex;

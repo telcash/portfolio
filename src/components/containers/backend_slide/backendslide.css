@@ -99,3 +99,39 @@
     color: white;
     font-weight: 500;
 }
+
+@media (max-width: 900px) {
+
+    .bes-container {
+        row-gap: 1rem;
+    }
+
+    .bes-content {
+        flex-direction: column-reverse;
+    }
+
+    .bes-logos {
+        flex: 1;   
+        flex-direction: row;
+    }
+
+    .logo-node, .logo-mongodb, .logo-oracle, .logo-nest {
+        padding: 0;
+        flex: 1;
+        justify-content: center;
+    }
+
+    .bes-list {
+        flex: 4;
+        padding: 0 2rem;
+        row-gap: 1.5rem;
+    }
+
+    .best-list-subtitle {
+        font-size: 2rem;
+    }
+
+    .best-list-description {
+        font-size: 1.5rem;
+    }
+}

@@ -1,5 +1,4 @@
 .fes-container {
-    margin-top: 65px;
     display: flex;
     width: 100%;
     height: 100vh;
@@ -77,7 +76,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     row-gap: 2.75rem;
-    padding: 4rem 16rem 0rem 0rem;
+    padding: 4rem 14rem 0rem 0rem;
 }
 
 .fest-list-subtitle {
@@ -94,4 +93,39 @@
     font-size: 1.75rem;
     color: white;
     font-weight: 500;
+}
+
+@media (max-width: 900px) {
+
+    .fes-container {
+        row-gap: 1rem;
+    }
+
+    .fes-content {
+        flex-direction: column;
+    }
+
+    .fes-logos {
+        flex: 1;   
+        flex-direction: row;
+    }
+
+    .logo-figma, .logo-react, .logo-angular {
+        padding: 0;
+        flex: 1;
+    }
+
+    .fes-list {
+        flex: 4;
+        padding: 0 2rem;
+        row-gap: 1.5rem;
+    }
+
+    .fest-list-subtitle {
+        font-size: 2rem;
+    }
+
+    .fest-list-description {
+        font-size: 1.5rem;
+    }
 }

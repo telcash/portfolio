@@ -47,6 +47,7 @@
     font-size: 3rem;
     font-weight: 700;
     color: white;
+    padding: 0 2rem;
 }
 
 .hero-description{
@@ -71,5 +72,7 @@
     .hero-description {
         margin-left: 0;
         text-align: center;
+        width: 100%;
+        padding: 0 3rem;
     }
 }

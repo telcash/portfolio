@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { LogoBox, ProgressiveText } from "../../ui";
 import { figmaLogo, reactLogo, angularLogo } from "../../../assets/logos";
 import { useTranslation } from "react-i18next";
@@ -6,6 +6,9 @@ import "./frontendslide.css";
 
 const FrontendSlide = ({ animate }) => {
     const [t] = useTranslation("global");
+    useEffect(() => {
+        console.log(window.innerWidth, window.innerHeight);
+    }, []);
 
     return (
         <div className="fes-container">
@@ -20,7 +23,7 @@ const FrontendSlide = ({ animate }) => {
                     <div className="logo-figma">
                         <LogoBox
                             logoImg={figmaLogo}
-                            logoSize={100}
+                            logoSize={window.innerWidth > 900 ? 100 : 50}
                             animate={animate}
                             x={-window.innerWidth}
                             animateOptions={[{ duration: 2, x: 0, rotation: 720, delay: 1 }]}
@@ -29,7 +32,7 @@ const FrontendSlide = ({ animate }) => {
                     <div className="logo-react">
                         <LogoBox
                             logoImg={reactLogo}
-                            logoSize={150}
+                            logoSize={window.innerWidth > 900 ? 150 : 50}
                             animate={animate}
                             scale={0}
                             animateOptions={[{ duration: 2, rotation: 360, delay: 1, scale: 1 }]}
@@ -38,7 +41,7 @@ const FrontendSlide = ({ animate }) => {
                     <div className="logo-angular">
                         <LogoBox
                             logoImg={angularLogo} 
-                            logoSize={125}
+                            logoSize={window.innerWidth > 900 ? 125 : 50}
                             animate={animate}
                             y={window.innerHeight}
                             animateOptions={[{

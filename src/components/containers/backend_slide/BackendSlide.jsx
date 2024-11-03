@@ -38,7 +38,7 @@ const BackendSlide = ({ animate }) => {
                     <div className="logo-node">
                         <LogoBox
                             logoImg={nodeLogo}
-                            logoSize={80}
+                            logoSize={window.innerWidth > 900 ? 80 : 50}
                             animate={animate}
                             y={-window.innerHeight}
                             animateOptions={[{
@@ -52,7 +52,7 @@ const BackendSlide = ({ animate }) => {
                     <div className="logo-mongodb">
                         <LogoBox
                             logoImg={mongodbLogo}
-                            logoSize={100}
+                            logoSize={window.innerWidth > 900 ? 100 : 50}
                             clipPath={'inset(0 100% 0 0)'}
                             animate={animate}
                             animateOptions={[{ duration: 2, clipPath: 'inset(0 0% 0 0)', delay: 1 }]}
@@ -61,7 +61,7 @@ const BackendSlide = ({ animate }) => {
                     <div className="logo-oracle">
                         <LogoBox
                             logoImg={oracleLogo}
-                            logoSize={120}
+                            logoSize={window.innerWidth > 900 ? 120 : 50}
                             opacity={0}
                             x={-window.innerWidth}
                             animate={animate}
@@ -71,7 +71,7 @@ const BackendSlide = ({ animate }) => {
                     <div className="logo-nest">
                         <LogoBox
                             logoImg={nestLogo}
-                            logoSize={140}
+                            logoSize={window.innerWidth > 900 ? 140 : 50 }
                             animate={animate}
                             scale={0}
                             animateOptions={[{ duration: 2, scale: 1, delay: 1, ease: "elastic(0.75, 0.3)" }]}
