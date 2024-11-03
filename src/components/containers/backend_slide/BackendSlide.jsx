@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { LogoBox, ProgressiveText } from "../../ui";
 import { nodeLogo, mongodbLogo, oracleLogo, nestLogo } from "../../../assets/logos";
 import { useTranslation } from "react-i18next";
@@ -6,6 +6,18 @@ import './backendslide.css';
 
 const BackendSlide = ({ animate }) => {
     const [t] = useTranslation("global");
+
+    const [width, setWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWidth(window.innerWidth);
+        };
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
     
     return (
         <div className="bes-container">
@@ -38,7 +50,7 @@ const BackendSlide = ({ animate }) => {
                     <div className="logo-node">
                         <LogoBox
                             logoImg={nodeLogo}
-                            logoSize={window.innerWidth > 900 ? 80 : 50}
+                            logoSize={width > 900 ? 80 : 50}
                             animate={animate}
                             y={-window.innerHeight}
                             animateOptions={[{
@@ -52,7 +64,7 @@ const BackendSlide = ({ animate }) => {
                     <div className="logo-mongodb">
                         <LogoBox
                             logoImg={mongodbLogo}
-                            logoSize={window.innerWidth > 900 ? 100 : 50}
+                            logoSize={width > 900 ? 100 : 50}
                             clipPath={'inset(0 100% 0 0)'}
                             animate={animate}
                             animateOptions={[{ duration: 2, clipPath: 'inset(0 0% 0 0)', delay: 1 }]}
@@ -61,9 +73,9 @@ const BackendSlide = ({ animate }) => {
                     <div className="logo-oracle">
                         <LogoBox
                             logoImg={oracleLogo}
-                            logoSize={window.innerWidth > 900 ? 120 : 50}
+                            logoSize={width> 900 ? 120 : 50}
                             opacity={0}
-                            x={-window.innerWidth}
+                            x={-width}
                             animate={animate}
                             animateOptions={[{ duration: 2, x: 0, opacity: 1, delay: 1, ease: "power1.in" }]}
                         />
@@ -71,7 +83,7 @@ const BackendSlide = ({ animate }) => {
                     <div className="logo-nest">
                         <LogoBox
                             logoImg={nestLogo}
-                            logoSize={window.innerWidth > 900 ? 140 : 50 }
+                            logoSize={width > 900 ? 140 : 50 }
                             animate={animate}
                             scale={0}
                             animateOptions={[{ duration: 2, scale: 1, delay: 1, ease: "elastic(0.75, 0.3)" }]}
