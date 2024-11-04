@@ -15,6 +15,15 @@ const FullPageSlider = () => {
         sectionsRef.current.forEach((section, i) => {
           gsap.set(section, { y: i * window.innerHeight });
         });
+
+        const container = document.querySelector('.slide-container');
+        const handleTouchMove = (e) => {
+            e.preventDefault();
+        };
+        container.addEventListener('touchmove', handleTouchMove, { passive: false });
+        return () => {
+            container.removeEventListener('touchmove', handleTouchMove);
+        }
       }, []);
 
     const scrollToSection = (index) => {
@@ -54,9 +63,6 @@ const FullPageSlider = () => {
         }
     };
 
-    const handleTouchMove = (e) => {
-        e.preventDefault();
-    };
 
     return (
         <div 
@@ -64,7 +70,6 @@ const FullPageSlider = () => {
             onWheel={handleWheel}
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
-            onTouchMove={handleTouchMove}
         >
             <NavBar scrollToSection={scrollToSection} currentIndex={currentIndex} />
             <DotNav scrollToSection={scrollToSection} currentIndex={currentIndex} />
