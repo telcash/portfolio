@@ -7,8 +7,9 @@ import './fullpageslider.css';
 const FullPageSlider = () => {
     const sectionsRef = useRef([]);
     const [currentIndex, setCurrentIndex] = useState(0);
-    const isScrollint = useRef(false);
+    const isScrolling = useRef(false);
     const scrollSensitivity = 30;
+    const touchStartY = useRef(0);
 
     useEffect(() => {
         sectionsRef.current.forEach((section, i) => {
@@ -17,14 +18,14 @@ const FullPageSlider = () => {
       }, []);
 
     const scrollToSection = (index) => {
-        if (isScrollint.current) return;
-        isScrollint.current = true;
+        if (isScrolling.current) return;
+        isScrolling.current = true;
         gsap.to(sectionsRef.current, {
             yPercent: -100 * index,
             ease: "power2.out",
             duration: 1,
             onComplete: () => {
-                isScrollint.current = false;
+                isScrolling.current = false;
             },
         });
         setCurrentIndex(index);
@@ -38,8 +39,28 @@ const FullPageSlider = () => {
         }
     };
 
+    const handleTouchStart = (e) => {
+        touchStartY.current = e.touches[0].clientY;
+    };
+
+    const handleTouchEnd = (e) => {
+        const touchEndY = e.changedTouches[0].clientY;
+        const swipeDistance = touchEndY - touchStartY.current;
+
+        if (swipeDistance < -scrollSensitivity && currentIndex < sectionsRef.current.length - 1) {
+            scrollToSection(currentIndex + 1);
+        } else if (swipeDistance > scrollSensitivity && currentIndex > 0) {
+            scrollToSection(currentIndex - 1);
+        }
+    };
+
     return (
-        <div className='slide-container' onWheel={handleWheel}>
+        <div 
+            className='slide-container'
+            onWheel={handleWheel}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+        >
             <NavBar scrollToSection={scrollToSection} currentIndex={currentIndex} />
             <DotNav scrollToSection={scrollToSection} currentIndex={currentIndex} />
             <div className='slide hero' ref={(el) => (sectionsRef.current[0] = el)}>
