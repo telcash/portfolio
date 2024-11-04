@@ -34,7 +34,7 @@
     align-items: center;
     justify-content: center;
     flex-flow: column nowrap;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 .title {
@@ -74,5 +74,6 @@
         text-align: center;
         width: 100%;
         padding: 0 3rem;
+        font-size: 1.5rem;
     }
 }
