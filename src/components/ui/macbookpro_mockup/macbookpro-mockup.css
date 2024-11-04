@@ -16,11 +16,11 @@
 
 .macbookpro-mockup img {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: block;
 }
 
-.macbook-inside-img {
+.macbookpro-inside-img {
     z-index: -1;
     position: absolute;
     width: 602px;
@@ -30,9 +30,21 @@
     overflow: hidden;
 }
 
-.macbook-inside-img img {
+.macbookpro-inside-img img {
     padding-bottom: 10rem;
     width: 100%;
     height: auto;
     position: relative;
+}
+
+@media (max-width: 900px) {
+
+    .macbookpro-mockup-img {
+        width: 305px;
+    }
+
+    .macbookpro-inside-img {
+        width: 264px;
+        left: 218px;
+    }
 }

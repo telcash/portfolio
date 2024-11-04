@@ -10,7 +10,7 @@ const MacbookProMockup = ({ animate, scrollingImg, yImg }) => {
         gsap.set(imgRef.current, { y: 0 });
         if (animate) {
             gsap.to(imgRef.current, {
-                y: -yImg,
+                y: window.innerWidth > 900 ? -yImg : -yImg * 0.5,
                 duration: 8,
                 ease: 'none',
                 repeat: -1,
@@ -24,9 +24,9 @@ const MacbookProMockup = ({ animate, scrollingImg, yImg }) => {
         <div className='macbookpro-mockup'>
             <div className='macbookpro-mockup-img'>
                 <img src={macbookpro} alt="" />
-                <div className='macbook-inside-img' ref={imgRef}>
-                    <img src={scrollingImg} alt="" />
-                </div>
+            </div>
+            <div className='macbookpro-inside-img' ref={imgRef}>
+                <img src={scrollingImg} alt="" />
             </div>
         </div>
     )

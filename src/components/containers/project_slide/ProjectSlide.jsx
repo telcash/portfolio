@@ -9,10 +9,10 @@ const ProjectSlide = ({animate, imagePc, imagePcY, imagePhone, imagePhoneY}) => 
                 <div>Proyecto</div>
             </div>
             <div className='mockup'>
-                <div>
+                <div className='mockup-macbook'>
                     <MacbookProMockup animate={animate} scrollingImg={imagePc} yImg={imagePcY} />
                 </div>
-                <div>
+                <div className='mockup-iphone'>
                     <IphoneMockup animate={animate} scrollingImg={imagePhone} yImg={imagePhoneY}/>
                 </div>
             </div>

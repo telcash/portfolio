@@ -9,7 +9,7 @@
     "hero": {
         "title": "Carlos Salazar",
         "subtitle": "Desarrollador Web Full Stack",
-        "description": "Apasionado del backend, con un gusto por diseños e interfaces simples e intuitivas. Actualmente enfocado en el Stack PostgreSQL-NestJS-React"
+        "description": "Desarrollador web con experiencia en aplicaciones completas, desde diseño de interfaces hasta gestión de bases de datos. Especializado en APIs seguras y escalables, manejo de MySQL, MongoDB y Oracle. Experto en frontend con React, Angular, HTML/CSS y Figma. Adaptable a nuevas tecnologías, busco contribuir a proyectos desafiantes y seguir desarrollando mis habilidades en desarrollo web."
     },
     "frontend": {
         "title": "Desarrollo Frontend",
@@ -40,26 +40,23 @@
         "title": "Desarrollo Backend",
         "skills": {
             "1": {
-                "t": "Prototipos y colaboración en UI/UX",
-                "d": "Crear prototipos y trabajar con diseño para mejorar la experiencia de usuario."
+                "t": "Desarrollo de APIs RESTful",
+                "d": "Creación de APIs escalables y seguras, con endpoints optimizados para un manejo eficiente de datos."
             },
             "2": {
-                "t": "Componentes reutilizables",
-                "d": "Desarrollar y optimizar componentes para consistencia y eficiencia."
+                "t": "Manejo de autenticación y autorización",
+                "d": "Implementación de sistemas de autenticación y autorización seguros utilizando JWT y OAuth."
             },
             "3": {
-                "t": "Interfaces adaptables y accesibles",
-                "d": "Diseñar interfaces que funcionen en todos los dispositivos y sean accesibles"
+                "t": "Administración de bases de datos",
+                "d": "Diseñar y administrar bases de datos relacionales (Oracle) y no relacionales (MongoDB)."
             },
             "4": {
-                "t": "Integración de APIs",
-                "d": "Conectar APIs y servicios externos para m{as funcionalidad."
-            },
-            "5": {
-                "t": "Gestión de estado con Redux",
-                "d": "Usar Redux para manegar el estado de aplicaciones complejas."
+                "t": "Configuración de servidores Linux",
+                "d": "Para despliegue de aplicaciones, incluyendo seguridad, permisos y optimización del sistema."
             }
         }
+
     },
     "contact": {
         "name": "Nombre",
@@ -69,5 +66,11 @@
         "emailError": "Correo electrónico incorrecto",
         "success": "Gracias, le responderé a la brevedad posible",
         "closeSuccess": "Cerrar"
+    },
+    "resume": {
+        "download": "Descargar CV",
+        "question": "¿Quieres descargar el CV de Carlos Salazar?",
+        "yes": "Sí",
+        "cancel": "Cancelar"
     }
 }

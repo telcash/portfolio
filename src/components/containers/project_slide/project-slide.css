@@ -29,8 +29,12 @@
     padding-top: 4rem;
 }
 
+
 @media (max-width: 900px) {
     .mockup {
         flex-direction: column-reverse;
+        padding-top: 0;
+        justify-content: flex-end;
+        row-gap: 5rem;
     }
 }

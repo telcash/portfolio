@@ -29,7 +29,7 @@ const BackendSlide = ({ animate }) => {
             </div>
             <div className="bes-content">
                 <div className="bes-list">
-                    {Array.from({ length: 5 }, (_, i) => (
+                    {Array.from({ length: 4 }, (_, i) => (
                         <div key={i} className="bes-list-li">
                             <div className="best-list-subtitle">
                                 <ProgressiveText

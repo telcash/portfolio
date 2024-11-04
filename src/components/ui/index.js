@@ -4,3 +4,4 @@ export { default as LogoBox } from './logo_box/LogoBox';
 export { default as ProgressiveText } from './progressive_text/ProgressiveText';
 export { default as IphoneMockup } from './iphone_mockup/IphoneMockup';
 export { default as MacbookProMockup } from './macbookpro_mockup/MacbookProMockup';
+export { default as ResumeDownloadButton } from './resume_download_button/ResumeDownloadButton';

@@ -7,12 +7,12 @@ import './navbar.css';
 const NavBar = ({ scrollToSection, currentIndex }) => {
   const [t, i18next] = useTranslation("global");
   const sections = [t("navbar.home"), t("navbar.frontend"), t("navbar.backend"), t("navbar.portfolio"), t("navbar.contact")];
-  const [es, setEs] = useState(true);
+  const [language, setLanguage] = useState('es');
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const setLanguage = (language) => {
+  const handleLanguageClick = (language) => {
     i18next.changeLanguage(language);
-    setEs(language === 'es');
+    setLanguage(language);
   };
 
   const toggleMenu = () => {
@@ -21,17 +21,14 @@ const NavBar = ({ scrollToSection, currentIndex }) => {
 
   return (
     <div className='navbar'>
-      {/* Logo */}
       <div className={`navbar-logo ${currentIndex === 0 ? "disable" : ""}`}>
         <img src={logo} alt='logo' />
       </div>
 
-      {/* Hamburger Icon for Mobile */}
       <div className="navbar-hamburger" onClick={toggleMenu}>
           {menuOpen ? <span>x</span> : <span>☰</span>}
       </div>
 
-      {/* Sidebar Menu for Mobile */}
       <div className={`navbar-sidebar ${menuOpen ? "open" : ""}`}>
         {sections.map((section, index) => (
           <button
@@ -39,7 +36,7 @@ const NavBar = ({ scrollToSection, currentIndex }) => {
             key={index}
             onClick={() => {
               scrollToSection(index);
-              setMenuOpen(false); // Close the menu after clicking
+              setMenuOpen(false);
             }}
           >
             <span className={`navbar-button-sub ${currentIndex === index ? "active" : ""}`}>{section}</span>
@@ -49,13 +46,11 @@ const NavBar = ({ scrollToSection, currentIndex }) => {
 
       {/* Regular Navbar for Desktop */}
       <div className='navbar-buttons'>
-        {/* Language Selection */}
         <div className='navbar-language-options'>
-          <div className={`${es ? "active" : ""}`} onClick={() => setLanguage('es')}>ES</div>
-          <div className={`${!es ? "active" : ""}`} onClick={() => setLanguage('en')}>EN</div>
+          <div className={`${ language === 'es' ? "active" : ""}`} onClick={() => handleLanguageClick('es')}>ES</div>
+          <div className={`${ language === 'en' ? "active" : ""}`} onClick={() => handleLanguageClick('en')}>EN</div>
         </div>
 
-        {/* Navigation Buttons */}
         {sections.map((section, index) => (
           <button
             className={`navbar-button desktop ${currentIndex === index ? "active" : ""}`}
@@ -66,8 +61,7 @@ const NavBar = ({ scrollToSection, currentIndex }) => {
           </button>
         ))}
 
-        {/* Social Media Icons */}
-        <SocialMedia />
+        <SocialMedia language={language}/>
       </div>
     </div>
   );

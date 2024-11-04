@@ -23,9 +23,9 @@ const IphoneMockup = ({ animate, scrollingImg, yImg}) => {
         <div className='iphone-mockup'>
             <div className='iphone-mockup-img'>
                 <img src={iphone} alt="" />
-                <div className='iphone-inside-img' ref={imgRef}>
-                    <img src={scrollingImg} alt="" />
-                </div>
+            </div>
+            <div className='iphone-inside-img' ref={imgRef}>
+                <img src={scrollingImg} alt="" />
             </div>
         </div>
     )

@@ -8,7 +8,8 @@
     },
     "hero": {
         "title": "Carlos Salazar",
-        "subtitle": "Full Stack Web Developer"
+        "subtitle": "Full Stack Web Developer",
+        "description": "Web developer with experience in full-stack applications, from interface design to database management. Specialized in secure and scalable APIs, with expertise in MySQL, MongoDB, and Oracle. Skilled in frontend development with React, Angular, HTML/CSS, and Figma. Adaptable to new technologies, I seek to contribute to challenging projects and continue developing my web development skills."
     },
     "frontend": {
         "title": "Frontend Development",
@@ -40,24 +41,20 @@
         "title": "Backend Development",
         "skills": {
             "1": {
-                "t": "Prototyping and UI/UX Collaboration",
-                "d": "Create prototypes and work with design to enhance the user experience."
+                "t": "RESTful API Development",
+                "d": "Creating scalable and secure APIs with optimized endpoints for efficient data handling."
             },
             "2": {
-                "t": "Reusable Components",
-                "d": "Develop and optimize components for consistency and efficiency."
+                "t": "Authentication and Authorization Management",
+                "d": "Implementing secure authentication and authorization systems using JWT and OAuth."
             },
             "3": {
-                "t": "Responsive and Accessible Interfaces",
-                "d": "Design interfaces that work across all devices and are accessible."
+                "t": "Database Administration",
+                "d": "Designing and managing relational (Oracle) and non-relational (MongoDB) databases."
             },
             "4": {
-                "t": "API Integration",
-                "d": "Connect APIs and external services for added functionality."
-            },
-            "5": {
-                "t": "State Management with Redux",
-                "d": "Use Redux to manage the state of complex applications."
+                "t": "Linux Server Configuration",
+                "d": "For application deployment, including security, permissions, and system optimization."
             }
         }
     },
@@ -69,5 +66,11 @@
         "emailError": "Invalid email",
         "success": "Thank you, I'll be in touch soon",
         "closeSuccess": "Close"
+    },
+    "resume": {
+        "download": "Download Resume",
+        "question": "Would you like to download Carlos Salazar's resume?",
+        "yes": "Yes",
+        "cancel": "Cancel"      
     }
 }

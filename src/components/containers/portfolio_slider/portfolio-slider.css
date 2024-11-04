@@ -39,3 +39,13 @@
 .right-arrow {
     right: 10rem;
 }
+
+@media (max-width: 900px) {
+    .left-arrow {
+        left: 5rem;
+    }
+
+    .right-arrow {
+        right: 5rem;
+    }
+}
