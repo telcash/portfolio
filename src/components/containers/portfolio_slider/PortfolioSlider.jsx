@@ -1,12 +1,14 @@
 import React, { useRef, useState} from 'react';
 import { gsap } from 'gsap';
-import { flowguardPc, flowguardPhone } from '../../../assets/projects-img';
+import { flowguardPc, flowguardPhone, essentialkteePc, essentialkteePhone, charlieSaboresPc, charlieSaboresPhone } from '../../../assets/projects-img';
 import ProjectSlide from '../project_slide/ProjectSlide';
+import { useTranslation } from "react-i18next";
 import './portfolio-slider.css';
 
 const PortfolioSlider = ({ animate }) => {
     const sectionsRef = useRef([]);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [t] = useTranslation("global");
     
     const scrollToSection = (index) => {
         gsap.to(sectionsRef.current, {
@@ -33,19 +35,55 @@ const PortfolioSlider = ({ animate }) => {
         <div className='portfolio-slider'>
             <div className='portfolio-slider-container'>
                 <div className='horizontal-slide' ref={(el) => (sectionsRef.current[0] = el)}>
-                    <ProjectSlide 
+                    <ProjectSlide
+                        data={
+                            {
+                                title: t("projects.1.title"),
+                                description: t("projects.1.description"),
+                                tech: t("projects.1.tech"),
+                                link: t("projects.1.link"),
+                            }
+                        }
                         animate={animate && currentIndex === 0}
                         imagePc={flowguardPc}
-                        imagePcY={1200}
+                        imagePcY={600}
                         imagePhone={flowguardPhone}
                         imagePhoneY={1200}
                     />
                 </div>
                 <div className='horizontal-slide' ref={(el) => (sectionsRef.current[1] = el)}>
-                    <h2>Proyecto 2</h2>
+                    <ProjectSlide
+                        data={
+                            {
+                                title: t("projects.2.title"),
+                                description: t("projects.2.description"),
+                                tech: t("projects.2.tech"),
+                                link: t("projects.2.link"),
+                            }
+                        }
+                        animate={animate && currentIndex === 1}
+                        imagePc={charlieSaboresPc}
+                        imagePcY={400}
+                        imagePhone={charlieSaboresPhone}
+                        imagePhoneY={750}
+                    />
                 </div>
                 <div className='horizontal-slide' ref={(el) => (sectionsRef.current[2] = el)}>
-                    <h2>Proyecto 3</h2>
+                    <ProjectSlide
+                        data={
+                            {
+                                title: t("projects.3.title"),
+                                description: t("projects.3.description"),
+                                tech: t("projects.3.tech"),
+                                link: t("projects.3.link"),
+                            }
+                        }
+                        animate={animate && currentIndex === 2}
+                        imagePc={essentialkteePc}
+                        imagePcY={450}
+                        imagePhone={essentialkteePhone}
+                        imagePhoneY={400}
+                    />
                 </div>
             </div>
             <button className='left-arrow' onClick={handleLeftArrowClick}>&lt;</button>

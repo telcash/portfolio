@@ -23,7 +23,7 @@
 .left-arrow, .right-arrow {
     border: unset;
     position: absolute;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
     font-size: 5rem;
     font-weight: bolder;
@@ -33,19 +33,21 @@
 }
 
 .left-arrow {
-    left: 10rem;
+    left: 5rem;
 }
 
 .right-arrow {
-    right: 10rem;
+    right: 5rem;
 }
 
 @media (max-width: 900px) {
     .left-arrow {
-        left: 5rem;
+        top: 50%;
+        left: 4rem;
     }
 
     .right-arrow {
-        right: 5rem;
+        top: 50%;
+        right: 4rem;
     }
 }
