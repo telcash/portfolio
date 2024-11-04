@@ -54,12 +54,17 @@ const FullPageSlider = () => {
         }
     };
 
+    const handleTouchMove = (e) => {
+        e.preventDefault();
+    };
+
     return (
         <div 
             className='slide-container'
             onWheel={handleWheel}
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
+            onTouchMove={handleTouchMove}
         >
             <NavBar scrollToSection={scrollToSection} currentIndex={currentIndex} />
             <DotNav scrollToSection={scrollToSection} currentIndex={currentIndex} />

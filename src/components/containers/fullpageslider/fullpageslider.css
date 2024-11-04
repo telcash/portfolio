@@ -6,7 +6,7 @@
 
 .slide {
     padding-top: 65px;
-    height: 100vh;
+    height: 100%;
     position: relative;
     display: flex;
     justify-content: center;
