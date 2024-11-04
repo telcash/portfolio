@@ -13,7 +13,7 @@ const FullPageSlider = () => {
 
     useEffect(() => {
         sectionsRef.current.forEach((section, i) => {
-          gsap.set(section, { yPercent: i * 100 });
+          gsap.set(section, { y: i * window.innerHeight });
         });
       }, []);
 
@@ -21,7 +21,7 @@ const FullPageSlider = () => {
         if (isScrolling.current) return;
         isScrolling.current = true;
         gsap.to(sectionsRef.current, {
-            yPercent: -100 * index,
+            y: -window.innerHeight * index,
             ease: "power2.out",
             duration: 1,
             onComplete: () => {
