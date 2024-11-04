@@ -55,7 +55,7 @@
         flex-direction: column-reverse;
         padding-top: 0;
         justify-content: flex-end;
-        row-gap: 5rem;
+        row-gap: 3rem;
     }
 
     .project-slide-content {
