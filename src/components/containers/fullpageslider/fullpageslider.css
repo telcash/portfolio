@@ -1,5 +1,6 @@
 .slide-container {
-    height: 100vh;
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-top: env(safe-area-inset-top);
     overflow: hidden;
     background-color: #5799b8;
 }

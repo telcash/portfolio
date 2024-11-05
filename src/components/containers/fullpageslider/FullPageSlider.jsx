@@ -3,6 +3,7 @@ import { BackendSlide, ContactForm, FrontendSlide, Hero, NavBar, PortfolioSlider
 import { DotNav } from '../../ui';
 import { gsap } from 'gsap';
 import './fullpageslider.css';
+import useViewportHeight from '../../../hooks/useViewportHeight';
 
 const FullPageSlider = () => {
     const sectionsRef = useRef([]);
@@ -10,6 +11,7 @@ const FullPageSlider = () => {
     const isScrolling = useRef(false);
     const scrollSensitivity = 30;
     const touchStartY = useRef(0);
+    const vh = useViewportHeight();
 
     useEffect(() => {
         sectionsRef.current.forEach((section, i) => {
@@ -70,6 +72,7 @@ const FullPageSlider = () => {
             onWheel={handleWheel}
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
+            style={{ height: `${vh * 100}px` }}
         >
             <NavBar scrollToSection={scrollToSection} currentIndex={currentIndex} />
             <DotNav scrollToSection={scrollToSection} currentIndex={currentIndex} />
