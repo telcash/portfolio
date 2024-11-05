@@ -37,7 +37,8 @@ const PortfolioSlider = ({ animate }) => {
                 {t("projects.title")}
             </div>
             <div className='portfolio-slider-container'>
-                <div className='horizontal-slide' ref={(el) => (sectionsRef.current[0] = el)}>
+                <div 
+                    className='horizontal-slide'ref={(el) => (sectionsRef.current[0] = el)}>
                     <ProjectSlide
                         data={
                             {

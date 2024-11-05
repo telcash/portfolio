@@ -77,3 +77,20 @@
         font-size: 1.5rem;
     }
 }
+
+@media (max-width: 440px) {
+    .hero-header-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .title {
+        padding-top: 1rem;
+        font-size: 3.5rem;
+    }
+
+    .subtitle {
+        font-size: 2.5rem;
+        padding: 0 4rem;
+    }
+}

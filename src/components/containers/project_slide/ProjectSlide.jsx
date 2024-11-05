@@ -3,7 +3,7 @@ import { MacbookProMockup, IphoneMockup } from '../../ui';
 import './project-slide.css';
 
 const ProjectSlide = ({data, animate, imagePc, imagePhone }) => {
-
+    
     return (
         <div className='project-slide'>
             <div className='project-slide-content'>
