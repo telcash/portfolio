@@ -25,3 +25,7 @@
 .slide.contact {
     background-color: #203162;
 }
+
+.slide.portfolio {
+    transition: background-color 1s ease;
+}

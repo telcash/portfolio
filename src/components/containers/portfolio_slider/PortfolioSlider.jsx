@@ -5,7 +5,7 @@ import ProjectSlide from '../project_slide/ProjectSlide';
 import { useTranslation } from "react-i18next";
 import './portfolio-slider.css';
 
-const PortfolioSlider = ({ animate }) => {
+const PortfolioSlider = ({ animate, onIndexChange }) => {
     const sectionsRef = useRef([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [t] = useTranslation("global");
@@ -16,6 +16,7 @@ const PortfolioSlider = ({ animate }) => {
             ease: "power2.out",
             duration: 1,
         });
+        handleIndexChange(index);
         setCurrentIndex(index);
     }
 
@@ -30,6 +31,10 @@ const PortfolioSlider = ({ animate }) => {
             scrollToSection(currentIndex + 1);
         }
     };
+
+    const handleIndexChange = (index) => {
+        onIndexChange(index);
+    }
 
     return (
         <div className='portfolio-slider'>

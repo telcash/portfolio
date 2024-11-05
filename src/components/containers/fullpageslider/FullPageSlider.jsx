@@ -8,6 +8,8 @@ import useViewportHeight from '../../../hooks/useViewportHeight';
 const FullPageSlider = () => {
     const sectionsRef = useRef([]);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [portfolioSliderIndex, setPortfolioSliderIndex] = useState(0);
+    const [portfolioBackgroundColor, setPortfolioBackgroundColor] = useState('#268E9B');
     const isScrolling = useRef(false);
     const scrollSensitivity = 30;
     const touchStartY = useRef(0);
@@ -27,6 +29,11 @@ const FullPageSlider = () => {
             container.removeEventListener('touchmove', handleTouchMove);
         }
       }, []);
+    
+    useEffect(() => {
+        const portfolioBackgroundsColors = ['#5070A6', '#71C16E', '#268E9B'];
+        setPortfolioBackgroundColor(portfolioBackgroundsColors[portfolioSliderIndex]);
+    }, [portfolioSliderIndex]);
 
     const scrollToSection = (index) => {
         if (isScrolling.current) return;
@@ -65,6 +72,9 @@ const FullPageSlider = () => {
         }
     };
 
+    const handlePortfolioSliderIndex = (index) => {
+        setPortfolioSliderIndex(index);
+    };
 
     return (
         <div 
@@ -85,8 +95,10 @@ const FullPageSlider = () => {
             <div className='slide backend' ref={(el) => (sectionsRef.current[2] = el)}>
                 <BackendSlide animate = {currentIndex === 2} />
             </div>
-            <div className='slide portfolio' ref={(el) => (sectionsRef.current[3] = el)}>
-                <PortfolioSlider animate = {currentIndex === 3} />
+            <div className='slide portfolio' ref={(el) => (sectionsRef.current[3] = el)}
+                style={{ backgroundColor: portfolioBackgroundColor }}
+            >
+                <PortfolioSlider animate = {currentIndex === 3} onIndexChange={handlePortfolioSliderIndex}/>
             </div>
             <div className='slide contact' ref={(el) => (sectionsRef.current[4] = el)}>
                 <ContactForm animate = {currentIndex === 4} />
