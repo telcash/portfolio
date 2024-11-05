@@ -26,7 +26,7 @@
     z-index: -1;
     position: absolute;
     width: 130px;
-    top: 20px;
+    top: 8px;
     left: 11px;
     height: auto;
     overflow: hidden;
@@ -37,4 +37,21 @@
     width: 100%;
     height: auto;
     position: relative;
+}
+
+@media (max-width: 900px) {
+
+    .iphone-mockup {
+        width: 120px;
+    }
+
+    .iphone-mockup-img {
+        width: 120px;
+    }
+
+    .iphone-inside-img {
+        top: 6px;
+        width: 104px;
+        left: 8px;
+    }
 }

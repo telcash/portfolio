@@ -46,9 +46,7 @@ const PortfolioSlider = ({ animate }) => {
                         }
                         animate={animate && currentIndex === 0}
                         imagePc={flowguardPc}
-                        imagePcY={600}
                         imagePhone={flowguardPhone}
-                        imagePhoneY={1200}
                     />
                 </div>
                 <div className='horizontal-slide' ref={(el) => (sectionsRef.current[1] = el)}>
@@ -63,9 +61,7 @@ const PortfolioSlider = ({ animate }) => {
                         }
                         animate={animate && currentIndex === 1}
                         imagePc={charlieSaboresPc}
-                        imagePcY={400}
                         imagePhone={charlieSaboresPhone}
-                        imagePhoneY={750}
                     />
                 </div>
                 <div className='horizontal-slide' ref={(el) => (sectionsRef.current[2] = el)}>
@@ -80,9 +76,7 @@ const PortfolioSlider = ({ animate }) => {
                         }
                         animate={animate && currentIndex === 2}
                         imagePc={essentialkteePc}
-                        imagePcY={450}
                         imagePhone={essentialkteePhone}
-                        imagePhoneY={400}
                     />
                 </div>
             </div>

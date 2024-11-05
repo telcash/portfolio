@@ -16,16 +16,16 @@
 
 .macbookpro-mockup img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
 }
 
 .macbookpro-inside-img {
     z-index: -1;
     position: absolute;
-    width: 602px;
-    top: 20px;
-    left: 49px;
+    width: 604px;
+    top: 12px;
+    left: 48px;
     height: auto;
     overflow: hidden;
 }
@@ -44,6 +44,7 @@
     }
 
     .macbookpro-inside-img {
+        top: 6px;
         width: 264px;
         left: 218px;
     }

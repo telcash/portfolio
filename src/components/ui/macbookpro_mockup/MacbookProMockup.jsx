@@ -2,23 +2,27 @@ import React, { useEffect, useRef } from 'react';
 import { macbookpro } from '../../../assets/mockups';
 import { gsap } from 'gsap';
 import './macbookpro-mockup.css';
+import useImageDimensions from '../../../hooks/useImageDimesions';
 
-const MacbookProMockup = ({ animate, scrollingImg, yImg }) => {
+const MacbookProMockup = ({ animate, scrollingImg }) => {
     const imgRef = useRef(null);
+
+    const { width, height } = useImageDimensions(scrollingImg);
 
     useEffect(() => {
         gsap.set(imgRef.current, { y: 0 });
         if (animate) {
             gsap.to(imgRef.current, {
-                y: window.innerWidth > 900 ? -yImg : -yImg * 0.5,
-                duration: 8,
+                y: window.innerWidth > 900 ? -(604 * (height / width) - 388)
+                    : -(264 * (height / width) - 169),
+                duration: 10,
                 ease: 'none',
                 repeat: -1,
                 yoyo: true,
-                delay: 1
+                delay: 1.5
             });
         }
-    }, [animate, yImg]);
+    }, [animate, height, width ]);
 
     return (
         <div className='macbookpro-mockup'>
