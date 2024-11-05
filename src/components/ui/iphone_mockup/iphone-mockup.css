@@ -42,7 +42,7 @@
 @media (max-width: 900px) {
 
     .iphone-mockup {
-        width: 120px;
+        width: 80px;
     }
 
     .iphone-mockup-img {
@@ -51,7 +51,7 @@
 
     .iphone-inside-img {
         top: 6px;
-        width: 104px;
-        left: 8px;
+        width: 72px;
+        left: 4px;
     }
 }

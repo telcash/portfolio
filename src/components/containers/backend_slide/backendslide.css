@@ -122,7 +122,7 @@
 
     .bes-list {
         flex: 4;
-        padding: 0 2rem;
+        padding: 0 8rem;
         row-gap: 1.5rem;
     }
 
@@ -132,5 +132,15 @@
 
     .best-list-description {
         font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 440px) {
+    .bes-title {
+        font-size: 3.5rem;
+    }
+
+    .bes-list {
+        padding: 0 2.5rem;
     }
 }

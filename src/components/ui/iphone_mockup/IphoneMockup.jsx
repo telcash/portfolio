@@ -14,7 +14,7 @@ const IphoneMockup = ({ animate, scrollingImg }) => {
         if (animate) {
             gsap.to(imgRef.current, {
                 y: window.innerWidth > 900 ? -(130 * (height / width) - 297)
-                    : -(104 * (height / width) - 237),
+                    : -(72 * (height / width) - 158),
                 duration: 10,
                 ease: 'none',
                 repeat: -1,
