@@ -59,6 +59,7 @@
         }
     },
     "projects": {
+        "title": "Projects",
         "1": {
             "title": "Flowguard Solutions",
             "description": "Landing page implemented with React on the frontend, native CSS styles, with background animations. Deployed on Netlify.",
@@ -66,7 +67,7 @@
             "link": "https://www.flowguardsolutions.com/"
         },
         "2": {
-            "title": "Charliesabores",
+            "title": "Charlie Sabores",
             "description": "Online store implemented with Angular and Angular Material on the frontend and NestJS on the backend. MySQL database with Prisma ORM. Deployed on a Linux server at Ionos.",
             "tech": "React, Redux, Firebase, HTML, CSS",
             "link": "https://charliesabores.online/"

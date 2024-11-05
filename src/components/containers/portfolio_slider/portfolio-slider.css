@@ -1,8 +1,17 @@
 .portfolio-slider {
     display: flex;
     position: relative;
+    flex-direction: column;
     width: 100vw;
     height: 100%;
+}
+
+.portfolio-slider-title {
+    font-size: 5.5rem;
+    font-weight: bold;
+    color: #d9d9d9;
+    text-align: center;
+    padding-top: 4rem;
 }
 
 .portfolio-slider-container {
@@ -41,6 +50,11 @@
 }
 
 @media (max-width: 900px) {
+    .portfolio-slider-title {
+        font-size: 3rem;
+        padding-top: 0;
+    }
+
     .left-arrow {
         top: 50%;
         left: 4rem;
@@ -51,3 +65,4 @@
         right: 4rem;
     }
 }
+

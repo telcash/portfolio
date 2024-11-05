@@ -46,99 +46,101 @@ const ContactForm = () => {
     };
 
     return (
-        <div className="contact-container">
-            <div className="contact-info">
-                <div className="info-logo">
-                    <img src={logoBlanco} alt="" />
+        <div className="contact">
+            <div className="contact-container">
+                <div className="contact-info">
+                    <div className="info-logo">
+                        <img src={logoBlanco} alt="" />
+                    </div>
+                    <div className="info-data">
+                        <div className="info-data-title">CARLOS SALAZAR</div>
+                        <div className="info-data-phone">Tel: +34 617638070</div>
+                        <div className="info-data-email">telcash@protonmail</div>
+                    </div>
                 </div>
-                <div className="info-data">
-                    <div className="info-data-title">CARLOS SALAZAR</div>
-                    <div className="info-data-phone">Tel: +34 617638070</div>
-                    <div className="info-data-email">telcash@protonmail</div>
-                </div>
-            </div>
-            <div className="contact-form">
-                <Box
-                    sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-                >
-                    <Box sx={{ maxWidth: 600, mx: "auto", p: 2, pt: 0 }}>
-                        <form ref={form} onSubmit={handleSubmit}>
-                            <TextField
-                                name="from_name"
-                                sx={{ backgroundColor: '#fff' }}
-                                inputProps={{ style: { fontFamily: 'sans-serif', fontSize: '1.6rem' } }}
-                                InputLabelProps={{ style: { fontFamily: 'sans-serif', fontSize: '1.6rem' } }}
-                                fullWidth
-                                label={t("contact.name")}
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
-                                margin="normal"
-                                required
-                                size="small"
-                                variant="filled"
-                            />
-                            <TextField
-                                error={(!isValidEmail && email !== '')}
-                                helperText={isValidEmail || email === '' ? "" : t("contact.emailError")}
-                                name="email"
-                                sx={{ backgroundColor: '#fff' }}
-                                inputProps={{ style: { fontFamily: 'sans-serif', fontSize: '1.6rem' } }}
-                                InputLabelProps={{ style: { fontFamily: 'sans-serif', fontSize: '1.6rem' } }}
-                                fullWidth
-                                label={t("contact.email")}
-                                value={email}
-                                onChange={(e) => handleEmailChange(e)}
-                                margin="normal"
-                                required
-                                size="small"
-                                variant="filled"
-                            />
-                            <TextField
-                                name="message"
-                                sx={{ backgroundColor: '#fff' }}
-                                inputProps={{ style: { fontFamily: 'sans-serif', fontSize: '1.6rem' } }}
-                                InputLabelProps={{ style: { fontFamily: 'sans-serif', fontSize: '1.6rem' } }}
-                                fullWidth
-                                label={t("contact.message")}
-                                value={message}
-                                onChange={(e) => setMessage(e.target.value)}
-                                margin="normal"
-                                required
-                                multiline
-                                rows={4}
-                                variant="filled"
-                            />
-                            <Button
-                                variant="contained"
-                                type="submit"
-                                sx={{ mt: 2, ":hover": { backgroundColor: '#BD7643' }, fontSize: '1.25rem', fontFamily: 'sans-serif' }}
-                                color="gray_clear"
+                <div className="contact-form">
+                    <Box
+                        sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}
+                    >
+                        <Box sx={{ maxWidth: 600, mx: "auto", p: 2, pt: 0}}>
+                            <form ref={form} onSubmit={handleSubmit}>
+                                <TextField
+                                    name="from_name"
+                                    sx={{backgroundColor: '#fff'}}
+                                    inputProps={{style: {fontFamily: 'sans-serif', fontSize: '1.6rem'}}}
+                                    InputLabelProps={{style: {fontFamily: 'sans-serif', fontSize: '1.6rem'}}}
+                                    fullWidth
+                                    label={t("contact.name")}
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                    margin="normal"
+                                    required
+                                    size="small"
+                                    variant="filled"
+                                />
+                                <TextField
+                                    error={(!isValidEmail && email !== '')}
+                                    helperText={isValidEmail || email === '' ? "" : t("contact.emailError")}
+                                    name="email" 
+                                    sx={{backgroundColor: '#fff'}}
+                                    inputProps={{style: {fontFamily: 'sans-serif', fontSize: '1.6rem'}}}
+                                    InputLabelProps={{style: {fontFamily: 'sans-serif', fontSize: '1.6rem'}}}
+                                    fullWidth
+                                    label={t("contact.email")}
+                                    value={email}
+                                    onChange={(e) => handleEmailChange(e)}
+                                    margin="normal"
+                                    required
+                                    size="small"
+                                    variant="filled"
+                                />
+                                <TextField
+                                    name="message"
+                                    sx={{backgroundColor: '#fff'}}
+                                    inputProps={{style: {fontFamily: 'sans-serif', fontSize: '1.6rem'}}}
+                                    InputLabelProps={{style: {fontFamily: 'sans-serif', fontSize: '1.6rem'}}}
+                                    fullWidth
+                                    label={t("contact.message")}
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)}
+                                    margin="normal"
+                                    required
+                                    multiline
+                                    rows={4}
+                                    variant="filled"
+                                />
+                                <Button 
+                                    variant="contained"
+                                    type="submit"
+                                    sx={{ mt: 2, ":hover": {backgroundColor: '#BD7643'}, fontSize: '1.25rem', fontFamily: 'sans-serif'}}    
+                                    color="gray_clear"
+                                >
+                                    {t("contact.submit")}
+                                </Button>
+                            </form>
+                            <div className="modal"
+                                style={{visibility: showSuccessModal ? 'visible' : 'hidden'}}
                             >
-                                {t("contact.submit")}
-                            </Button>
-                        </form>
-                        <div className="modal"
-                            style={{ visibility: showSuccessModal ? 'visible' : 'hidden' }}
-                        >
-                            <Typography mt={2}
-                                mb={1}
-                                color="#fff"
-                                fontSize={'1.6rem'}
-                            >
-                                {t("contact.success")}
-                            </Typography>
-                            <Button
-                                variant="contained"
-                                color="gray_clear"
-                                size="small"
-                                onClick={handleCloseModal}
-                                sx={{ mt: 2, ":hover": { backgroundColor: '#BD7643' }, fontSize: '1.25rem', fontFamily: 'sans-serif' }}
-                            >
-                                {t("contact.closeSuccess")}
-                            </Button>
-                        </div>
+                                <Typography mt={2}
+                                    mb={1}
+                                    color="#fff"
+                                    fontSize={'1.6rem'}
+                                >
+                                    {t("contact.success")}
+                                </Typography>
+                                <Button 
+                                    variant="contained"
+                                    color="gray_clear"
+                                    size="small"
+                                    onClick={handleCloseModal}
+                                    sx={{ mt: 2, ":hover": {backgroundColor: '#BD7643'}, fontSize: '1.25rem', fontFamily: 'sans-serif'}}
+                                >
+                                    {t("contact.closeSuccess")}
+                                </Button>
+                            </div>
+                        </Box>
                     </Box>
-                </Box>
+                </div>
             </div>
         </div>
     );
