@@ -68,7 +68,7 @@
         },
         "2": {
             "title": "Charlie Sabores",
-            "description": "Tienda online, implementada con Angular y Angular Material en el frontend y NestJS en el Backend. Base de datos MySLQ y ORM Prisma. Desplegada en servidor Linus en Ionos.",
+            "description": "Tienda online, implementada con Angular y Angular Material en el frontend y NestJS en el Backend. Base de datos MySLQ y ORM Prisma. Desplegada en servidor Linux en Ionos.",
             "tech": "React, Redux, Firebase, HTML, CSS",
             "link": "https://charliesabores.online/"
         },
